@@ -113,14 +113,14 @@ USER_AGENT_LIST = [
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 from shutil import which
-
+  
 SELENIUM_DRIVER_NAME = 'chrome'
-SELENIUM_DRIVER_EXECUTABLE_PATH = which('chromedriver')
-SELENIUM_DRIVER_ARGUMENTS = ['--headless'] 
+#SELENIUM_DRIVER_EXECUTABLE_PATH = which('chromedriver')
+SELENIUM_DRIVER_ARGUMENTS=['--headless'] 
 
 DOWNLOADER_MIDDLEWARES = {
    "linkedln.middlewares.ShowRequestsHeadersMiddleWare": 543,
-   "scrapy_selenium.SeleniumMiddleware": 800
+   'scrapy_selenium.SeleniumMiddleware': 800
 }
 
 # Enable or disable extensions
