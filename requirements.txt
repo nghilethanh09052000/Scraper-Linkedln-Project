@@ -1,3 +1,6 @@
 scrapy
 scrapy_cloudflare_middleware
 python-dotenv
+scrapy-selenium
+webdriver-manager
+psycopg2

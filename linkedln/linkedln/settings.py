@@ -102,10 +102,14 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    "linkedln.pipelines.LinkedlnPipeline": 300,
-#}
-
+ITEM_PIPELINES = {
+   "linkedln.pipelines.PostgreSQLPipeline": 300,
+}
+POSTGRES_HOST     = 'localhost'
+POSTGRES_DB       = 'Linkedin'
+POSTGRES_USER     = 'postgres'
+POSTGRES_PASSWORD = 'abcABC@123'
+POSTGRES_PORT     = '5432'
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True
