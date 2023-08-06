@@ -4,3 +4,4 @@ python-dotenv
 scrapy-selenium
 webdriver-manager
 psycopg2
+python-dotenv

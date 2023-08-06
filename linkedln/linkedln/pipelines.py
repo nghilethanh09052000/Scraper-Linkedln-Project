@@ -3,7 +3,7 @@ from scrapy.exceptions import DropItem
 
 
 class PostgreSQLPipeline:
-    
+
     def __init__(self, postgres_host, postgres_db, postgres_user, postgres_password, postgres_port):
         self.postgres_host = postgres_host
         self.postgres_db = postgres_db
@@ -43,11 +43,10 @@ class PostgreSQLPipeline:
             'industry': item['industry'],
             'tagline': item['tagline'],
             'phone': item['phone'],
-            'description': item['description'],
             'company_url': item['company_url'],
-            'founded': int(item['founded']),
-            'linkedin_followers': int(item['linkedin_followers']),
-            'employees': int(item['employees']),
+            'founded': item['founded'],
+            'linkedin_followers': item['linkedin_followers'],
+            'employees': item['employees'],
             'country_code': item['country_code'],
             'geographicArea': item['geographicArea'],
             'postal_code': item['postal_code'],
@@ -59,12 +58,12 @@ class PostgreSQLPipeline:
         # SQL query to insert data into the table (replace with your own table name)
         insert_query = """
             INSERT INTO linkedin_company
-            (name, linkedin_url, industry, tagline, phone, description, company_url,
+            (name, linkedin_url, industry, tagline, phone, company_url,
             founded, linkedin_followers, employees, country_code, geographicArea,
             postal_code, city, line1, line2)
             VALUES
             (%(name)s, %(linkedin_url)s, %(industry)s, %(tagline)s, %(phone)s,
-            %(description)s, %(company_url)s, %(founded)s, %(linkedin_followers)s,
+            %(company_url)s, %(founded)s, %(linkedin_followers)s,
             %(employees)s, %(country_code)s, %(geographicArea)s, %(postal_code)s,
             %(city)s, %(line1)s, %(line2)s)
         """

@@ -56,8 +56,8 @@ USER_AGENT_LIST = [
    ]
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-CONCURRENT_REQUESTS = 10
-DOWNLOAD_DELAY = 5
+#CONCURRENT_REQUESTS = 10
+#DOWNLOAD_DELAY = 5
 
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
@@ -105,11 +105,7 @@ DOWNLOADER_MIDDLEWARES = {
 ITEM_PIPELINES = {
    "linkedln.pipelines.PostgreSQLPipeline": 300,
 }
-POSTGRES_HOST     = 'localhost'
-POSTGRES_DB       = 'Linkedin'
-POSTGRES_USER     = 'postgres'
-POSTGRES_PASSWORD = 'abcABC@123'
-POSTGRES_PORT     = '5432'
+
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True
@@ -135,3 +131,14 @@ POSTGRES_PORT     = '5432'
 
 FEED_EXPORT_ENCODING = "utf-8"
 
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+POSTGRES_HOST     = os.getenv('POSTGRES_HOST')
+POSTGRES_DB       = os.getenv('POSTGRES_DB')
+POSTGRES_USER     = os.getenv('POSTGRES_USER')
+POSTGRES_PASSWORD = os.getenv('POSTGRES_PASSWORD')
+POSTGRES_PORT     = os.getenv('POSTGRES_PORT')
+LINKEDIN_USERNAME = os.getenv('LINKEDIN_USERNAME')
+LINKEDIN_PASSWORD = os.getenv('LINKEDIN_PASSWORD')

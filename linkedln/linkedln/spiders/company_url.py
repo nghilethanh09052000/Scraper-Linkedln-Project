@@ -1,9 +1,13 @@
 import scrapy
 import json
-from ..utils import utils, COOKIE_STRING
+from ..utils import utils
 from scrapy_selenium import SeleniumRequest
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+import datetime
+from urllib.parse import quote
+from selenium.common.exceptions import NoSuchElementException
+
 
 class LinkedlnCompanySpider(scrapy.Spider):
 
@@ -19,26 +23,22 @@ class LinkedlnCompanySpider(scrapy.Spider):
     def get_followers(self, followers, company_follower):
         for follower in followers:
             if company_follower == follower['entityUrn']:
-                return int(follower['followerCount'])
+                return int(follower['followerCount']) if type(follower['followerCount']) is str else follower['followerCount']
+            
+    def handle_error(self, failure):
 
+        failed_url = failure.request.url
+        now = datetime.datetime.now()
+        log_entry = f"Processed Failed With: {failed_url}, Datetime: {now}\n, Keyword: {self.keyword}"
+
+        with open(f'{self.keyword}_error_log.txt', 'a') as log_file:
+            log_file.write(log_entry)
+
+    
     def start_requests(self):
         
         yield SeleniumRequest(
             url      = "https://www.linkedin.com",
-            # headers = {
-            #     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-            #     "Accept-Encoding": "gzip, deflate, br",
-            #     "Accept-Language": "en-US,en;q=0.9",
-            #     "Sec-Ch-Ua": '"Not/A)Brand";v="99", "Microsoft Edge";v="115", "Chromium";v="115"',
-            #     "Sec-Ch-Ua-Mobile": "?0",
-            #     "Sec-Ch-Ua-Platform": '"Windows"',
-            #     "Sec-Fetch-Dest": "document",
-            #     "Sec-Fetch-Mode": "navigate",
-            #     "Sec-Fetch-Site": "none",
-            #     "Sec-Fetch-User": "?1",
-            #     "Upgrade-Insecure-Requests": "1",
-            #     "User-Agent": utils.random_user_agent()
-            # },
             callback  = self.get_login_function,
             wait_time = 5,
         )
@@ -46,11 +46,17 @@ class LinkedlnCompanySpider(scrapy.Spider):
     def get_login_function(self, response, **kwargs):
         
         driver = response.meta['driver']
+
+        try:
+            email_field = driver.find_element(By.XPATH, '//form/div[1]/div/div/div/input[@name="session_key"]')
+        except NoSuchElementException:
+            driver.refresh()
+
         email_field = driver.find_element(By.XPATH, '//form/div[1]/div/div/div/input[@name="session_key"]')
-        email_field.send_keys('thanhnghi591@gmail.com')
+        email_field.send_keys(self.settings.get('LINKEDIN_USERNAME'))
 
         password_field = driver.find_element(By.XPATH, '//form/div[1]/div/div/div/input[@name="session_password"]')
-        password_field.send_keys('abcABC@123')
+        password_field.send_keys(self.settings.get('LINKEDIN_PASSWORD'))
 
         submit_button = driver.find_element(By.XPATH, '//form/div[2]/button')
         submit_button.click()
@@ -61,9 +67,10 @@ class LinkedlnCompanySpider(scrapy.Spider):
 
         desired_cookies = { cookie['name'] : cookie['value'].replace('"',"") for cookie in cookies }
 
+        keyword = self.keyword
        
         yield scrapy.Request(
-            url = f'https://www.linkedin.com/voyager/api/graphql?variables=(start:{str(self.count)},origin:SWITCH_SEARCH_VERTICAL,query:(keywords:a,flagshipSearchIntent:SEARCH_SRP,queryParameters:List((key:resultType,value:List(COMPANIES))),includeFiltersInResponse:false))&&queryId=voyagerSearchDashClusters.a789a8e572711844816fa31872de1e2f',
+            url = f'https://www.linkedin.com/voyager/api/graphql?variables=(start:{str(self.count)},origin:SWITCH_SEARCH_VERTICAL,query:(keywords:{keyword},flagshipSearchIntent:SEARCH_SRP,queryParameters:List((key:resultType,value:List(COMPANIES))),includeFiltersInResponse:false))&&queryId=voyagerSearchDashClusters.a789a8e572711844816fa31872de1e2f',
             headers = {
                 'accept': 'application/vnd.linkedin.normalized+json+2.1',
                 'accept-encoding': 'gzip, deflate, br',
@@ -72,6 +79,7 @@ class LinkedlnCompanySpider(scrapy.Spider):
             },
             cookies = desired_cookies,
             callback = self.get_company_urls,
+            errback = self.handle_error,
             meta = {
                 'cookies': desired_cookies,
                 'csrf_token': csrf_token
@@ -89,11 +97,10 @@ class LinkedlnCompanySpider(scrapy.Spider):
 
             navigate_url = company_url['navigationUrl']
             name = navigate_url.split('/')[-2]
-
-            if not name: continue
+            encode_company = quote(name, safe='')
 
             yield scrapy.Request(
-                url = f"https://www.linkedin.com/voyager/api/graphql?variables=(universalName:{name})&&queryId=voyagerOrganizationDashCompanies.4fbcd4df2d3e37fcf3a4f5296be958b9",
+                url = f"https://www.linkedin.com/voyager/api/graphql?variables=(universalName:{encode_company})&&queryId=voyagerOrganizationDashCompanies.4fbcd4df2d3e37fcf3a4f5296be958b9",
                 headers = {
                     'accept': 'application/vnd.linkedin.normalized+json+2.1',
                     'accept-encoding': 'gzip, deflate, br',
@@ -104,14 +111,21 @@ class LinkedlnCompanySpider(scrapy.Spider):
                 meta = {
                     'url': navigate_url
                 },
-                callback = self.get_company_details
+                callback = self.get_company_details,
+                errback=self.handle_error
             )
 
         if self.count >= 1000: return
 
-        self.count+=10
+        now = datetime.datetime.now()
+        log_entry = f"Processed item count: {self.count}, Datetime: {now}\n, Keyword: {self.keyword}"
+        with open(f'{self.keyword}_companies_logs.txt', 'a') as log_file:
+            log_file.write(log_entry)
+
+        self.count += 10  
+
         yield scrapy.Request(
-            url = f'https://www.linkedin.com/voyager/api/graphql?variables=(start:{str(self.count)},origin:SWITCH_SEARCH_VERTICAL,query:(keywords:a,flagshipSearchIntent:SEARCH_SRP,queryParameters:List((key:resultType,value:List(COMPANIES))),includeFiltersInResponse:false))&&queryId=voyagerSearchDashClusters.a789a8e572711844816fa31872de1e2f',
+            url = f'https://www.linkedin.com/voyager/api/graphql?variables=(start:{str(self.count)},origin:SWITCH_SEARCH_VERTICAL,query:(keywords:{self.keyword},flagshipSearchIntent:SEARCH_SRP,queryParameters:List((key:resultType,value:List(COMPANIES))),includeFiltersInResponse:false))&&queryId=voyagerSearchDashClusters.a789a8e572711844816fa31872de1e2f',
             headers = {
                 'accept': 'application/vnd.linkedin.normalized+json+2.1',
                 'accept-encoding': 'gzip, deflate, br',
@@ -120,6 +134,7 @@ class LinkedlnCompanySpider(scrapy.Spider):
             },
             cookies = cookies,
             callback = self.get_company_urls,
+            errback=self.handle_error,
             meta = {
                 'cookies': cookies,
                 'csrf_token': csrf_token
@@ -134,27 +149,29 @@ class LinkedlnCompanySpider(scrapy.Spider):
        
        industries = [ i for i in data['included'] if "name" in i ]
        followers =  [ i for i in data['included'] if "followeeCount" in i ]
-       viewerPermissions = [ i for i in data['included'] if "viewerPermissions" in i ][0]
+       viewerPermissions = [ i for i in data['included'] if "viewerPermissions" in i ]
+
+       if not viewerPermissions : return
+
+       viewerPermissions = viewerPermissions[0]
 
        name        = viewerPermissions.get('name')
-       employee    = viewerPermissions.get('employeeCount')
+       employee    = int(viewerPermissions.get('employeeCount')) if type(viewerPermissions.get('employeeCount')) is str else viewerPermissions.get('employeeCount')
        company_url = viewerPermissions.get('websiteUrl')
-       phone       = viewerPermissions.get('phone')
-       description = viewerPermissions.get('description').trim() if viewerPermissions.get('description') is not None else None
+       phone       = viewerPermissions.get('phone')['number'] if viewerPermissions.get('phone') is not None else None
        tagline     = viewerPermissions.get('tagline')
-       founded     = int(viewerPermissions.get('foundedOn')['year']) if viewerPermissions.get('foundedOn') is not None else None
-
-       headquarter = viewerPermissions.get('headquarter')['address']
-       country_code = headquarter.get('country')
-       geographicArea = headquarter.get('geographicArea')
-       city = headquarter.get('city')
-       postal_code = headquarter.get('postalCode')
-       line1 = headquarter.get('line1')
-       line2 = headquarter.get('line2')
+       founded     = viewerPermissions.get('foundedOn')['year'] if viewerPermissions.get('foundedOn') is not None else None
        
-       industry = self.get_industry(industries, viewerPermissions.get('*industry')[0] )
-       follower = self.get_followers(followers, viewerPermissions.get('*followingState'))
-
+       headquarter    = viewerPermissions.get('headquarter')['address'] if viewerPermissions.get('headquarter') is not None else {}
+       country_code   = headquarter.get('country')
+       geographicArea = headquarter.get('geographicArea')
+       city           = headquarter.get('city')
+       postal_code    = headquarter.get('postalCode')
+       line1          = headquarter.get('line1')
+       line2          = headquarter.get('line2')
+       
+       industry = self.get_industry(industries, viewerPermissions.get('*industry')[0] ) if viewerPermissions.get('*industry') is not None else None
+       follower = self.get_followers(followers, viewerPermissions.get('*followingState')) if viewerPermissions.get('*followingState') is not None else None
 
 
        yield {
@@ -163,11 +180,10 @@ class LinkedlnCompanySpider(scrapy.Spider):
            'industry': industry,
            'tagline': tagline,
            'phone': phone,
-           'description': description,
            'company_url': company_url,
            'founded': founded,
-           'linkedin_followers': int(follower),
-           'employees': int(employee),
+           'linkedin_followers': follower,
+           'employees': employee,
            'country_code': country_code,
            'geographicArea': geographicArea,
            'postal_code': postal_code,
