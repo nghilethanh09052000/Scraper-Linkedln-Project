@@ -33,7 +33,6 @@ class LinkedlnCompanySpider(scrapy.Spider):
 
         with open(f'{self.keyword}_error_log.txt', 'a') as log_file:
             log_file.write(log_entry)
-
     
     def start_requests(self):
         

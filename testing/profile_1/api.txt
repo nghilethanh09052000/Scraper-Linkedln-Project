@@ -1,0 +1,5 @@
+https://www.linkedin.com/voyager/api/identity/dash/profiles?q=memberIdentity&memberIdentity=chloepolitis&decorationId=com.linkedin.voyager.dash.deco.identity.profile.WebTopCardCore-20
+https://www.linkedin.com/voyager/api/identity/dash/profiles?q=memberIdentity&memberIdentity=chloepolitis&decorationId=com.linkedin.voyager.dash.deco.identity.profile.TopCardSupplementary-131
+https://www.linkedin.com/voyager/api/graphql?includeWebMetadata=true&variables=(vanityName:chloepolitis)&&queryId=voyagerIdentityDashProfiles.07adfdb5c9ddb130d5d0dc2821c06665
+https://www.linkedin.com/voyager/api/graphql?includeWebMetadata=true&variables=(profileUrn:urn%3Ali%3Afsd_profile%3AACoAAAkKAVABymOrwxccRD3PqOSyOBrMIM45KLw)&&queryId=voyagerIdentityDashProfileCards.6ac5b932812d02137a06a9a34501f7fa
+https://www.linkedin.com/voyager/api/graphql?includeWebMetadata=true&variables=(profileUrn:urn%3Ali%3Afsd_profile%3AACoAAAkKAVABymOrwxccRD3PqOSyOBrMIM45KLw)&&queryId=voyagerIdentityDashProfileCards.495c170fe8d5f0213971ba236b1b0b17

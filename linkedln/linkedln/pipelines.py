@@ -56,17 +56,21 @@ class PostgreSQLPipeline:
         }
 
         # SQL query to insert data into the table (replace with your own table name)
-        insert_query = """
-            INSERT INTO linkedin_company
-            (name, linkedin_url, industry, tagline, phone, company_url,
-            founded, linkedin_followers, employees, country_code, geographicArea,
-            postal_code, city, line1, line2)
-            VALUES
-            (%(name)s, %(linkedin_url)s, %(industry)s, %(tagline)s, %(phone)s,
-            %(company_url)s, %(founded)s, %(linkedin_followers)s,
-            %(employees)s, %(country_code)s, %(geographicArea)s, %(postal_code)s,
-            %(city)s, %(line1)s, %(line2)s)
-        """
+        table_name = ''
+        if spider.name == 'company_url':
+            insert_query = """
+                INSERT INTO linkedin_company
+                (name, linkedin_url, industry, tagline, phone, company_url,
+                founded, linkedin_followers, employees, country_code, geographicArea,
+                postal_code, city, line1, line2)
+                VALUES
+                (%(name)s, %(linkedin_url)s, %(industry)s, %(tagline)s, %(phone)s,
+                %(company_url)s, %(founded)s, %(linkedin_followers)s,
+                %(employees)s, %(country_code)s, %(geographicArea)s, %(postal_code)s,
+                %(city)s, %(line1)s, %(line2)s)
+            """
+        elif spider.name == 'profile_url':
+            table_name = 'linkedin_profile'
 
         try:
             # Execute the INSERT query with the data dictionary

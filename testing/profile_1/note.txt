@@ -1,0 +1,33 @@
+https://www.linkedin.com/in/chloepolitis/
+
+- API 1: 
++ Last Name
++ FirstName
++ Headline:Social Media Director at Mount Sinai Health System
++ geoLocation: => Get By Function
+
+- API 2: 
++ Followers Counts
++ Company Name: Mount Sinai Health System
++ Linkedin Profile
++ FirstName
++ Lastname
++ Headline:Social Media Director at Mount Sinai Health System
+
+- API 3: Some possible regarding 4
+
+- API 4:
++ Licenses & certifications
++ Publications
++ Experience
++ Organization
++ Volunteering
++ Education
++ Honors & awards
++ Languages
+
+- API 5:
++ First Name
++ Last Name
++ Skills
+
