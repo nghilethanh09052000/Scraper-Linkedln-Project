@@ -1,0 +1,45 @@
+- API 1: https://www.linkedin.com/voyager/api/identity/dash/profiles?q=memberIdentity&memberIdentity=chloepolitis&decorationId=com.linkedin.voyager.dash.deco.identity.profile.WebTopCardCore-20
+
++ linkedin_url: string
++ first_name: string
++ last_name: string
++ headline: string
++ location: string
+
+- API 2: https://www.linkedin.com/voyager/api/identity/dash/profiles?q=memberIdentity&memberIdentity=truc-do&decorationId=com.linkedin.voyager.dash.deco.identity.profile.TopCardSupplementary-131
+
++ followers
+
+
+- API 3: https://www.linkedin.com/voyager/api/graphql?includeWebMetadata=true&variables=(memberIdentity:chloepolitis)&&queryId=voyagerIdentityDashProfiles.84cab0be7183be5d0b8e79cd7d5ffb7b
+
++ birthday : { }
++ websites : []
++ email: string
++ twitter: string
++ phones
++ address
+
+
+- API 4: https://www.linkedin.com/voyager/api/graphql?includeWebMetadata=true&variables=(profileUrn:urn%3Ali%3Afsd_profile%3AACoAAAkKAVABymOrwxccRD3PqOSyOBrMIM45KLw)&&queryId=voyagerIdentityDashProfileCards.6ac5b932812d02137a06a9a34501f7fa
++ about: string
+
+- API 5: https://www.linkedin.com/voyager/api/graphql?variables=(profileUrn:urn%3Ali%3Afsd_profile%3AACoAAAkKAVABymOrwxccRD3PqOSyOBrMIM45KLw,sectionType:experience,locale:en_US)&&queryId=voyagerIdentityDashProfileComponents.d1fbf4203e7f3e809d980fc2ff199b5f
+
+
+- API 6: education
+
+
+- API 7: volunteering-experiences
+
+
+- API 8: languages
+
+
+- API 9: skills
+
+
+- API 10: organizations
+
+
+- API 11: honors

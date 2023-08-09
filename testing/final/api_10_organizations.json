@@ -1,0 +1,350 @@
+{
+    "data": {
+        "data": {
+            "identityDashProfileComponentsBySectionType": {
+                "metadata": {
+                    "headerStyledAsCard": false,
+                    "primaryAction": null,
+                    "showBackButton": false,
+                    "secondaryAction": null,
+                    "title": "Organizations",
+                    "$recipeTypes": [
+                        "com.linkedin.1318552c87ee38d4d885187353a3175d"
+                    ],
+                    "tertiaryAction": null,
+                    "$type": "com.linkedin.voyager.dash.identity.profile.tetris.ComponentsCollectionMetadata"
+                },
+                "$recipeTypes": [
+                    "com.linkedin.01f6b59f4fc8f672704097bd2ac91752"
+                ],
+                "elements": [
+                    {
+                        "components": {
+                            "insightComponent": null,
+                            "carouselComponent": null,
+                            "textComponent": null,
+                            "profileContentCollectionsComponent": null,
+                            "entityComponent": null,
+                            "completionMeterComponent": null,
+                            "wwuAdsComponent": null,
+                            "fixedListComponent": null,
+                            "headerComponent": null,
+                            "nullStateComponent": null,
+                            "tabComponent": null,
+                            "entityPileComponent": null,
+                            "formElement": null,
+                            "promptComponent": null,
+                            "actionComponent": null,
+                            "*pagedListComponent": "urn:li:fsd_profilePagedListComponent:(ACoAAAkKAVABymOrwxccRD3PqOSyOBrMIM45KLw,ORGANIZATIONS_VIEW_DETAILS,urn:li:fsd_profile:ACoAAAkKAVABymOrwxccRD3PqOSyOBrMIM45KLw,NONE,en_US)",
+                            "emptyStateComponent": null,
+                            "mediaComponent": null,
+                            "contentComponent": null,
+                            "miniUpdateUrn": null,
+                            "visibilitySettingButton": null
+                        },
+                        "$recipeTypes": [
+                            "com.linkedin.4eca547eb2d58d950169cc1349a17aa2"
+                        ],
+                        "useCardStyling": false,
+                        "$type": "com.linkedin.voyager.dash.identity.profile.tetris.Component"
+                    }
+                ],
+                "$type": "com.linkedin.restli.common.CollectionResponse"
+            },
+            "$recipeTypes": [
+                "com.linkedin.e8ca8eb13a02ec774b06c2de98a8612c"
+            ],
+            "$type": "com.linkedin.e8ca8eb13a02ec774b06c2de98a8612c"
+        }
+    },
+    "included": [
+        {
+            "components": {
+                "metadata": {
+                    "paginationToken": null,
+                    "$recipeTypes": [
+                        "com.linkedin.87b0cae8a60fbd033d0aa32b32072f78"
+                    ],
+                    "$type": "com.linkedin.voyager.dash.identity.profile.tetris.PagedComponentsCollectionMetadata"
+                },
+                "paging": {
+                    "count": 20,
+                    "start": 0,
+                    "total": 1,
+                    "$recipeTypes": [
+                        "com.linkedin.db5ef2d76498a3ed0fb4dc69b1c20127"
+                    ],
+                    "$type": "com.linkedin.restli.common.CollectionMetadata"
+                },
+                "$recipeTypes": [
+                    "com.linkedin.1c91023e162ae48bd4fbd06f5f11b470"
+                ],
+                "elements": [
+                    {
+                        "components": {
+                            "insightComponent": null,
+                            "carouselComponent": null,
+                            "textComponent": null,
+                            "entityComponent": {
+                                "metadata": null,
+                                "subComponents": {
+                                    "numInitialComponentsToShow": null,
+                                    "components": [
+                                        {
+                                            "components": {
+                                                "insightComponent": {
+                                                    "image": {
+                                                        "attributes": [
+                                                            {
+                                                                "scalingType": null,
+                                                                "detailData": {
+                                                                    "profilePictureWithoutFrame": null,
+                                                                    "profilePictureWithRingStatus": null,
+                                                                    "icon": null,
+                                                                    "systemImage": null,
+                                                                    "*companyLogo": "urn:li:fsd_company:8031",
+                                                                    "nonEntityGroupLogo": null,
+                                                                    "vectorImage": null,
+                                                                    "nonEntityProfessionalEventLogo": null,
+                                                                    "profilePicture": null,
+                                                                    "imageUrl": null,
+                                                                    "professionalEventLogo": null,
+                                                                    "nonEntityCompanyLogo": null,
+                                                                    "nonEntitySchoolLogo": null,
+                                                                    "groupLogo": null,
+                                                                    "schoolLogo": null,
+                                                                    "ghostImage": null,
+                                                                    "nonEntityProfilePicture": null
+                                                                },
+                                                                "tintColor": null,
+                                                                "$recipeTypes": [
+                                                                    "com.linkedin.6dbb5c06323c45a01d45cd215ae317c6"
+                                                                ],
+                                                                "tapTargets": [],
+                                                                "displayAspectRatio": null,
+                                                                "$type": "com.linkedin.voyager.dash.common.image.ImageAttribute"
+                                                            }
+                                                        ],
+                                                        "editableAccessibilityText": false,
+                                                        "actionTarget": null,
+                                                        "accessibilityTextAttributes": [],
+                                                        "totalCount": null,
+                                                        "accessibilityText": "Company logo",
+                                                        "$recipeTypes": [
+                                                            "com.linkedin.81c90db1141f88d582081417f62c335b"
+                                                        ],
+                                                        "$type": "com.linkedin.voyager.dash.common.image.ImageViewModel"
+                                                    },
+                                                    "renderedAsFooter": false,
+                                                    "controlName": null,
+                                                    "secondaryAction": null,
+                                                    "smallIcon": false,
+                                                    "text": {
+                                                        "padded": false,
+                                                        "expandable": true,
+                                                        "numInitialLinesToShow": null,
+                                                        "actionTrackingMetadata": [],
+                                                        "text": {
+                                                            "textDirection": "USER_LOCALE",
+                                                            "text": "Associated with Mount Sinai Health System",
+                                                            "attributesV2": [],
+                                                            "accessibilityTextAttributesV2": [],
+                                                            "accessibilityText": "Associated with Mount Sinai Health System",
+                                                            "$recipeTypes": [
+                                                                "com.linkedin.4eccd894dd43a1bea3a82d015b0b7fd0"
+                                                            ],
+                                                            "$type": "com.linkedin.voyager.dash.common.text.TextViewModel"
+                                                        },
+                                                        "actionTarget": null,
+                                                        "seeMoreControlName": null,
+                                                        "$recipeTypes": [
+                                                            "com.linkedin.90880522927849069c77838040cd4071"
+                                                        ],
+                                                        "$type": "com.linkedin.voyager.dash.identity.profile.tetris.TextComponent"
+                                                    },
+                                                    "actionTarget": null,
+                                                    "$recipeTypes": [
+                                                        "com.linkedin.ca03625ae6467756b2c349d7668f44cf"
+                                                    ],
+                                                    "$type": "com.linkedin.voyager.dash.identity.profile.tetris.InsightComponent"
+                                                },
+                                                "carouselComponent": null,
+                                                "textComponent": null,
+                                                "entityComponent": null,
+                                                "completionMeterComponent": null,
+                                                "wwuAdsComponent": null,
+                                                "fixedListComponent": null,
+                                                "headerComponent": null,
+                                                "nullStateComponent": null,
+                                                "tabComponent": null,
+                                                "entityPileComponent": null,
+                                                "pagedListComponent": null,
+                                                "formElement": null,
+                                                "promptComponent": null,
+                                                "actionComponent": null,
+                                                "emptyStateComponent": null,
+                                                "mediaComponent": null,
+                                                "contentComponent": null,
+                                                "miniUpdateUrn": null,
+                                                "visibilitySettingButton": null
+                                            },
+                                            "$recipeTypes": [
+                                                "com.linkedin.4eca547eb2d58d950169cc1349a17aa2"
+                                            ],
+                                            "useCardStyling": false,
+                                            "$type": "com.linkedin.voyager.dash.identity.profile.tetris.Component"
+                                        }
+                                    ],
+                                    "decorationType": "NONE",
+                                    "padded": false,
+                                    "footerAction": null,
+                                    "title": null,
+                                    "$recipeTypes": [
+                                        "com.linkedin.e9c4170da93a8b3f6b146e8a326b548b"
+                                    ],
+                                    "$type": "com.linkedin.voyager.dash.identity.profile.tetris.FixedListComponent"
+                                },
+                                "caption": null,
+                                "iconEntityType": false,
+                                "tertiaryAction": null,
+                                "reorderableItem": null,
+                                "impressionTrackingMetadata": [],
+                                "secondaryAction": null,
+                                "titleV2": {
+                                    "padded": false,
+                                    "expandable": true,
+                                    "numInitialLinesToShow": null,
+                                    "actionTrackingMetadata": [],
+                                    "text": {
+                                        "textDirection": "USER_LOCALE",
+                                        "text": "Association of National Advertisers",
+                                        "attributesV2": [],
+                                        "accessibilityTextAttributesV2": [],
+                                        "accessibilityText": "Association of National Advertisers",
+                                        "$recipeTypes": [
+                                            "com.linkedin.4eccd894dd43a1bea3a82d015b0b7fd0"
+                                        ],
+                                        "$type": "com.linkedin.voyager.dash.common.text.TextViewModel"
+                                    },
+                                    "actionTarget": null,
+                                    "seeMoreControlName": null,
+                                    "$recipeTypes": [
+                                        "com.linkedin.90880522927849069c77838040cd4071"
+                                    ],
+                                    "$type": "com.linkedin.voyager.dash.identity.profile.tetris.TextComponent"
+                                },
+                                "image": null,
+                                "textActionTarget": null,
+                                "actionTrackingMetadata": [],
+                                "supplementaryInfo": null,
+                                "labelV2": null,
+                                "$recipeTypes": [
+                                    "com.linkedin.e266ab9fcf00e5e59b4a16d81a74dcbf"
+                                ],
+                                "$type": "com.linkedin.voyager.dash.identity.profile.tetris.EntityComponent",
+                                "badge": null,
+                                "padded": true,
+                                "size": "LARGE",
+                                "subtitle": {
+                                    "textDirection": "USER_LOCALE",
+                                    "text": "Commitee Member, Digital and Social · Jun 2020 - Present",
+                                    "attributesV2": [],
+                                    "accessibilityTextAttributesV2": [],
+                                    "accessibilityText": "Commitee Member, Digital and Social · Jun 2020 - Present",
+                                    "$recipeTypes": [
+                                        "com.linkedin.4eccd894dd43a1bea3a82d015b0b7fd0"
+                                    ],
+                                    "$type": "com.linkedin.voyager.dash.common.text.TextViewModel"
+                                },
+                                "subtitleV2": null
+                            },
+                            "completionMeterComponent": null,
+                            "wwuAdsComponent": null,
+                            "fixedListComponent": null,
+                            "headerComponent": null,
+                            "nullStateComponent": null,
+                            "tabComponent": null,
+                            "entityPileComponent": null,
+                            "pagedListComponent": null,
+                            "formElement": null,
+                            "promptComponent": null,
+                            "actionComponent": null,
+                            "emptyStateComponent": null,
+                            "mediaComponent": null,
+                            "contentComponent": null,
+                            "miniUpdateUrn": null,
+                            "visibilitySettingButton": null
+                        },
+                        "$recipeTypes": [
+                            "com.linkedin.4eca547eb2d58d950169cc1349a17aa2"
+                        ],
+                        "useCardStyling": false,
+                        "$type": "com.linkedin.voyager.dash.identity.profile.tetris.Component"
+                    }
+                ],
+                "$type": "com.linkedin.restli.common.CollectionResponse"
+            },
+            "decorationType": "LINE_SEPARATED",
+            "padded": false,
+            "entityUrn": "urn:li:fsd_profilePagedListComponent:(ACoAAAkKAVABymOrwxccRD3PqOSyOBrMIM45KLw,ORGANIZATIONS_VIEW_DETAILS,urn:li:fsd_profile:ACoAAAkKAVABymOrwxccRD3PqOSyOBrMIM45KLw,NONE,en_US)",
+            "reorderable": false,
+            "pageSize": 20,
+            "footerAction": null,
+            "$recipeTypes": [
+                "com.linkedin.dfdba9c9aa3144ebc8b1fd4ad660e629"
+            ],
+            "$type": "com.linkedin.voyager.dash.identity.profile.tetris.PagedListComponent"
+        },
+        {
+            "entityUrn": "urn:li:fsd_company:8031",
+            "logoResolutionResult": {
+                "url": null,
+                "vectorImage": {
+                    "digitalmediaAsset": "urn:li:digitalmediaAsset:C4D0BAQGXOFlzpDFFIw",
+                    "attribution": null,
+                    "$recipeTypes": [
+                        "com.linkedin.8579bdadc525c8c0455b05de178cee07"
+                    ],
+                    "artifacts": [
+                        {
+                            "width": 200,
+                            "$recipeTypes": [
+                                "com.linkedin.2be5282dcbf0403956f8604906664b46"
+                            ],
+                            "fileIdentifyingUrlPathSegment": "200_200/0/1625189676644?e=1699488000&v=beta&t=7MzK0QM6bq505bQULsKndlHGom2EYenfsA3LN-b1ZTY",
+                            "expiresAt": 1699488000000,
+                            "height": 200,
+                            "$type": "com.linkedin.common.VectorArtifact"
+                        },
+                        {
+                            "width": 100,
+                            "$recipeTypes": [
+                                "com.linkedin.2be5282dcbf0403956f8604906664b46"
+                            ],
+                            "fileIdentifyingUrlPathSegment": "100_100/0/1625189676644?e=1699488000&v=beta&t=Rm6xbXap_koQrrGznKZMpNptg7B-j6uAd9o9cKDPhBQ",
+                            "expiresAt": 1699488000000,
+                            "height": 100,
+                            "$type": "com.linkedin.common.VectorArtifact"
+                        },
+                        {
+                            "width": 400,
+                            "$recipeTypes": [
+                                "com.linkedin.2be5282dcbf0403956f8604906664b46"
+                            ],
+                            "fileIdentifyingUrlPathSegment": "400_400/0/1625189676644?e=1699488000&v=beta&t=8nuJ5bDk-LKHyqkFCKoAsBw2kmZRG3Y8Tu45aMrKjzQ",
+                            "expiresAt": 1699488000000,
+                            "height": 400,
+                            "$type": "com.linkedin.common.VectorArtifact"
+                        }
+                    ],
+                    "rootUrl": "https://media.licdn.com/dms/image/C4D0BAQGXOFlzpDFFIw/company-logo_",
+                    "$type": "com.linkedin.common.VectorImage"
+                }
+            },
+            "$recipeTypes": [
+                "com.linkedin.66fc05baae836dde0b9325d826eb8a95"
+            ],
+            "$type": "com.linkedin.voyager.dash.organization.Company"
+        }
+    ]
+}

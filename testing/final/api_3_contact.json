@@ -1,0 +1,592 @@
+{
+    "data": {
+        "data": {
+            "$recipeTypes": [
+                "com.linkedin.325d8aa60877c5d1a8cc282d5c2e2e50"
+            ],
+            "identityDashProfilesByMemberIdentity": {
+                "*elements": [
+                    "urn:li:fsd_profile:ACoAAAkKAVABymOrwxccRD3PqOSyOBrMIM45KLw"
+                ],
+                "$recipeTypes": [
+                    "com.linkedin.a8d620936333bdec9a86158f76d96935"
+                ],
+                "$type": "com.linkedin.restli.common.CollectionResponse"
+            },
+            "$type": "com.linkedin.325d8aa60877c5d1a8cc282d5c2e2e50"
+        },
+        "extensions": {
+            "webMetadata": {}
+        }
+    },
+    "meta": {
+        "microSchema": {
+            "isGraphQL": true,
+            "version": "2.1",
+            "types": {
+                "com.linkedin.ce799ef67802c9d5dfc8022e73ff54f6": {
+                    "fields": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "qr": {
+                            "type": "com.linkedin.common.Url"
+                        },
+                        "qrCodeImageUrl": {
+                            "type": "com.linkedin.common.Url"
+                        }
+                    },
+                    "baseType": "com.linkedin.voyager.dash.identity.profile.WeChatContactInfo"
+                },
+                "com.linkedin.c03d2f192ff826d89ada15c90f401cb9": {
+                    "fields": {
+                        "inviteeMemberResolutionResult": {
+                            "resolvedFrom": "inviteeMember",
+                            "type": "com.linkedin.5e962a640cfe3594f5a3e0b0cb21bc6b"
+                        },
+                        "invitationType": {
+                            "type": "com.linkedin.voyager.dash.relationships.invitation.InvitationType"
+                        },
+                        "inviteeMember": {
+                            "type": "string"
+                        },
+                        "entityUrn": {
+                            "type": "com.linkedin.voyager.dash.common.InvitationUrn"
+                        },
+                        "invitationState": {
+                            "type": "com.linkedin.voyager.dash.relationships.invitation.InvitationState"
+                        },
+                        "invitationId": {
+                            "type": "long"
+                        },
+                        "sharedSecret": {
+                            "type": "string"
+                        }
+                    },
+                    "baseType": "com.linkedin.voyager.dash.relationships.invitation.Invitation"
+                },
+                "com.linkedin.671ccfe3465395ff74d3f323f68c65a7": {
+                    "fields": {
+                        "targetInviteeResolutionResult": {
+                            "resolvedFrom": "targetInvitee",
+                            "type": "com.linkedin.5e962a640cfe3594f5a3e0b0cb21bc6b"
+                        },
+                        "inviter": {
+                            "type": "string"
+                        },
+                        "targetInvitee": {
+                            "type": "string"
+                        },
+                        "invitationRelationshipForm": {
+                            "type": "com.linkedin.5f99741fd13bb2f1ad35ece21d13cec6"
+                        },
+                        "inviterResolutionResult": {
+                            "resolvedFrom": "inviter",
+                            "type": "com.linkedin.5e962a640cfe3594f5a3e0b0cb21bc6b"
+                        }
+                    },
+                    "baseType": "com.linkedin.voyager.dash.relationships.invitation.NoInvitation"
+                },
+                "com.linkedin.91dbb8279e0615e79143ad1ed02013fa": {
+                    "fields": {
+                        "category": {
+                            "type": "com.linkedin.voyager.dash.identity.profile.WebsiteCategory"
+                        },
+                        "url": {
+                            "type": "com.linkedin.common.Url"
+                        },
+                        "label": {
+                            "type": "string"
+                        }
+                    },
+                    "baseType": "com.linkedin.voyager.dash.identity.profile.Website"
+                },
+                "com.linkedin.b181477c4e35f9b0d4cda910f5b5c627": {
+                    "fields": {
+                        "number": {
+                            "type": "string"
+                        }
+                    },
+                    "baseType": "com.linkedin.common.PhoneNumber"
+                },
+                "com.linkedin.91bef0ac1c826e23e620e6c425c11387": {
+                    "fields": {
+                        "attribution": {
+                            "type": "string"
+                        },
+                        "rootUrl": {
+                            "type": "string"
+                        },
+                        "artifacts": {
+                            "type": {
+                                "array": "com.linkedin.4b6474790860e3ccde6d19a49d802ac2"
+                            }
+                        }
+                    },
+                    "baseType": "com.linkedin.common.VectorImage"
+                },
+                "com.linkedin.199b38faef5472f57734b2776fbf3346": {
+                    "fields": {
+                        "month": {
+                            "type": "int"
+                        },
+                        "day": {
+                            "type": "int"
+                        }
+                    },
+                    "baseType": "com.linkedin.common.Date"
+                },
+                "com.linkedin.f1ee49a5b9c2d3e51980b3d6a134ea4e": {
+                    "fields": {
+                        "memberRelationshipUnion": {
+                            "type": {
+                                "union": {
+                                    "self": "com.linkedin.a1aaa870dfaba251228aa6955792ed9b",
+                                    "connection": "com.linkedin.5aa5c07e149c385112d087ba66489e28",
+                                    "noConnection": "com.linkedin.891e33f5629dc3536e45bcebe41d7abf"
+                                }
+                            }
+                        },
+                        "memberRelationshipDataResolutionResult": {
+                            "derivedFrom": "memberRelationshipData",
+                            "type": {
+                                "union": {
+                                    "noInvitation": "com.linkedin.671ccfe3465395ff74d3f323f68c65a7",
+                                    "connection": "com.linkedin.5aa5c07e149c385112d087ba66489e28",
+                                    "invitation": "com.linkedin.c03d2f192ff826d89ada15c90f401cb9"
+                                }
+                            }
+                        },
+                        "memberRelationshipData": {
+                            "type": {
+                                "union": {
+                                    "noInvitation": "com.linkedin.671ccfe3465395ff74d3f323f68c65a7",
+                                    "connection": "com.linkedin.5aa5c07e149c385112d087ba66489e28",
+                                    "invitation": "com.linkedin.c03d2f192ff826d89ada15c90f401cb9"
+                                }
+                            }
+                        },
+                        "entityUrn": {
+                            "type": "com.linkedin.voyager.dash.common.MemberRelationshipUrn"
+                        },
+                        "memberRelationship": {
+                            "derivedFrom": "memberRelationshipUnion",
+                            "type": {
+                                "union": {
+                                    "self": "com.linkedin.a1aaa870dfaba251228aa6955792ed9b",
+                                    "connection": "com.linkedin.5aa5c07e149c385112d087ba66489e28",
+                                    "noConnection": "com.linkedin.891e33f5629dc3536e45bcebe41d7abf"
+                                }
+                            }
+                        }
+                    },
+                    "baseType": "com.linkedin.voyager.dash.relationships.MemberRelationship"
+                },
+                "com.linkedin.a1aaa870dfaba251228aa6955792ed9b": {
+                    "fields": {},
+                    "baseType": "com.linkedin.restli.common.EmptyRecord"
+                },
+                "com.linkedin.325d8aa60877c5d1a8cc282d5c2e2e50": {
+                    "fields": {
+                        "identityDashProfilesByMemberIdentity": {
+                            "type": "com.linkedin.a8d620936333bdec9a86158f76d96935"
+                        }
+                    },
+                    "baseType": "com.linkedin.graphql.Query"
+                },
+                "com.linkedin.32c183921221d8c7dcb3cee2e2372d1e": {
+                    "fields": {
+                        "type": {
+                            "type": "com.linkedin.voyager.dash.common.handles.PhoneNumberType"
+                        },
+                        "phoneNumber": {
+                            "type": "com.linkedin.b181477c4e35f9b0d4cda910f5b5c627"
+                        }
+                    },
+                    "baseType": "com.linkedin.voyager.dash.common.handles.PhoneNumber"
+                },
+                "com.linkedin.41f826267a8d1d57543a7dd1dad8a9a5": {
+                    "fields": {
+                        "controlName": {
+                            "type": "com.linkedin.voyager.dash.common.tracking.ControlName"
+                        },
+                        "type": {
+                            "type": "com.linkedin.voyager.dash.relationships.invitation.InvitationRelationshipOptionType"
+                        },
+                        "name": {
+                            "type": "string"
+                        }
+                    },
+                    "baseType": "com.linkedin.voyager.dash.relationships.invitation.InvitationRelationshipOption"
+                },
+                "com.linkedin.a8d620936333bdec9a86158f76d96935": {
+                    "fields": {
+                        "elements": {
+                            "type": {
+                                "array": "com.linkedin.5e962a640cfe3594f5a3e0b0cb21bc6b"
+                            }
+                        }
+                    },
+                    "baseType": "com.linkedin.restli.common.CollectionResponse"
+                },
+                "com.linkedin.5f99741fd13bb2f1ad35ece21d13cec6": {
+                    "fields": {
+                        "title": {
+                            "type": "string"
+                        },
+                        "invitationRelationshipOptions": {
+                            "type": {
+                                "array": "com.linkedin.41f826267a8d1d57543a7dd1dad8a9a5"
+                            }
+                        },
+                        "subtitle": {
+                            "type": "string"
+                        }
+                    },
+                    "baseType": "com.linkedin.voyager.dash.relationships.invitation.InvitationRelationshipForm"
+                },
+                "com.linkedin.f06a5f1958f50fc39d16bfec9561fd29": {
+                    "fields": {
+                        "provider": {
+                            "type": "com.linkedin.voyager.dash.identity.profile.InstantMessengerProvider"
+                        },
+                        "id": {
+                            "type": "string"
+                        }
+                    },
+                    "baseType": "com.linkedin.voyager.dash.identity.profile.InstantMessenger"
+                },
+                "com.linkedin.fb46f517cce3350f18748f7e9531f0a7": {
+                    "fields": {
+                        "displayImageWithFrameReferenceUnion": {
+                            "type": {
+                                "union": {
+                                    "url": "com.linkedin.common.Url",
+                                    "vectorImage": "com.linkedin.91bef0ac1c826e23e620e6c425c11387"
+                                }
+                            }
+                        },
+                        "frameType": {
+                            "type": "com.linkedin.voyager.dash.identity.profile.PhotoFrameType"
+                        },
+                        "displayImageReferenceResolutionResult": {
+                            "derivedFrom": "displayImageReference",
+                            "type": {
+                                "union": {
+                                    "url": "com.linkedin.common.Url",
+                                    "vectorImage": "com.linkedin.91bef0ac1c826e23e620e6c425c11387"
+                                }
+                            }
+                        },
+                        "displayImageWithFrameReference": {
+                            "derivedFrom": "displayImageWithFrameReferenceUnion",
+                            "type": {
+                                "union": {
+                                    "url": "com.linkedin.common.Url",
+                                    "vectorImage": "com.linkedin.91bef0ac1c826e23e620e6c425c11387"
+                                }
+                            }
+                        },
+                        "displayImageUrn": {
+                            "type": "com.linkedin.common.Urn"
+                        },
+                        "displayImageReference": {
+                            "type": {
+                                "union": {
+                                    "url": "com.linkedin.common.Url",
+                                    "vectorImage": "com.linkedin.91bef0ac1c826e23e620e6c425c11387"
+                                }
+                            }
+                        }
+                    },
+                    "baseType": "com.linkedin.voyager.dash.identity.profile.PhotoFilterPicture"
+                },
+                "com.linkedin.5aa5c07e149c385112d087ba66489e28": {
+                    "fields": {
+                        "connectedMemberResolutionResult": {
+                            "resolvedFrom": "connectedMember",
+                            "type": "com.linkedin.5e962a640cfe3594f5a3e0b0cb21bc6b"
+                        },
+                        "createdAt": {
+                            "type": "com.linkedin.common.Time"
+                        },
+                        "connectedMember": {
+                            "type": "string"
+                        },
+                        "entityUrn": {
+                            "type": "com.linkedin.voyager.dash.common.ConnectionUrn"
+                        }
+                    },
+                    "baseType": "com.linkedin.voyager.dash.relationships.Connection"
+                },
+                "com.linkedin.8f080579167f225be504bac65651dc2f": {
+                    "fields": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "credentialId": {
+                            "type": "string"
+                        }
+                    },
+                    "baseType": "com.linkedin.voyager.dash.identity.profile.TwitterHandle"
+                },
+                "com.linkedin.4b6474790860e3ccde6d19a49d802ac2": {
+                    "fields": {
+                        "width": {
+                            "type": "int"
+                        },
+                        "fileIdentifyingUrlPathSegment": {
+                            "type": "string"
+                        },
+                        "expiresAt": {
+                            "type": "com.linkedin.common.Time"
+                        },
+                        "height": {
+                            "type": "int"
+                        }
+                    },
+                    "baseType": "com.linkedin.common.VectorArtifact"
+                },
+                "com.linkedin.5e962a640cfe3594f5a3e0b0cb21bc6b": {
+                    "fields": {
+                        "birthDateOn": {
+                            "type": "com.linkedin.199b38faef5472f57734b2776fbf3346"
+                        },
+                        "memorialized": {
+                            "type": "boolean"
+                        },
+                        "lastName": {
+                            "type": "string"
+                        },
+                        "address": {
+                            "type": "string"
+                        },
+                        "instantMessengers": {
+                            "type": {
+                                "array": "com.linkedin.f06a5f1958f50fc39d16bfec9561fd29"
+                            }
+                        },
+                        "tempStatusEmoji": {
+                            "type": "string"
+                        },
+                        "iweWarned": {
+                            "type": "boolean"
+                        },
+                        "weChatContactInfo": {
+                            "type": "com.linkedin.ce799ef67802c9d5dfc8022e73ff54f6"
+                        },
+                        "tempStatusExpiredAtUnion": {
+                            "type": {
+                                "union": {
+                                    "customizedExpiredAt": "com.linkedin.common.Time",
+                                    "standardizedExpiration": "com.linkedin.voyager.dash.identity.profile.StandardizedExpiration"
+                                }
+                            }
+                        },
+                        "phoneNumbers": {
+                            "type": {
+                                "array": "com.linkedin.32c183921221d8c7dcb3cee2e2372d1e"
+                            }
+                        },
+                        "twitterHandles": {
+                            "type": {
+                                "array": "com.linkedin.8f080579167f225be504bac65651dc2f"
+                            }
+                        },
+                        "profilePicture": {
+                            "type": "com.linkedin.fb46f517cce3350f18748f7e9531f0a7"
+                        },
+                        "firstName": {
+                            "type": "string"
+                        },
+                        "emailAddress": {
+                            "type": "com.linkedin.031ffde079830a0123a2ef12ad5ae842"
+                        },
+                        "tempStatus": {
+                            "type": "string"
+                        },
+                        "entityUrn": {
+                            "type": "com.linkedin.voyager.dash.common.ProfileUrn"
+                        },
+                        "memberRelationship": {
+                            "type": "com.linkedin.f1ee49a5b9c2d3e51980b3d6a134ea4e",
+                            "isInjection": true
+                        },
+                        "websites": {
+                            "type": {
+                                "array": "com.linkedin.91dbb8279e0615e79143ad1ed02013fa"
+                            }
+                        },
+                        "emailRequired": {
+                            "type": "boolean"
+                        },
+                        "publicIdentifier": {
+                            "type": "string"
+                        },
+                        "headline": {
+                            "type": "string"
+                        },
+                        "tempStatusExpiredAt": {
+                            "derivedFrom": "tempStatusExpiredAtUnion",
+                            "type": {
+                                "union": {
+                                    "customizedExpiredAt": "com.linkedin.common.Time",
+                                    "standardizedExpiration": "com.linkedin.voyager.dash.identity.profile.StandardizedExpiration"
+                                }
+                            }
+                        }
+                    },
+                    "baseType": "com.linkedin.voyager.dash.identity.profile.Profile"
+                },
+                "com.linkedin.891e33f5629dc3536e45bcebe41d7abf": {
+                    "fields": {
+                        "memberDistance": {
+                            "type": "com.linkedin.voyager.dash.relationships.NoConnectionMemberDistance"
+                        },
+                        "invitation": {
+                            "derivedFrom": "invitationUnion",
+                            "type": {
+                                "union": {
+                                    "noInvitation": "com.linkedin.671ccfe3465395ff74d3f323f68c65a7",
+                                    "invitation": "com.linkedin.c03d2f192ff826d89ada15c90f401cb9"
+                                }
+                            }
+                        },
+                        "invitationUnion": {
+                            "type": {
+                                "union": {
+                                    "noInvitation": "com.linkedin.671ccfe3465395ff74d3f323f68c65a7",
+                                    "invitation": "com.linkedin.c03d2f192ff826d89ada15c90f401cb9"
+                                }
+                            }
+                        }
+                    },
+                    "baseType": "com.linkedin.voyager.dash.relationships.NoConnection"
+                },
+                "com.linkedin.031ffde079830a0123a2ef12ad5ae842": {
+                    "fields": {
+                        "type": {
+                            "type": "com.linkedin.voyager.dash.common.handles.EmailAddressType"
+                        },
+                        "emailAddress": {
+                            "type": "com.linkedin.common.EmailAddress"
+                        }
+                    },
+                    "baseType": "com.linkedin.voyager.dash.common.handles.EmailAddress"
+                }
+            }
+        }
+    },
+    "included": [
+        {
+            "birthDateOn": null,
+            "lastName": "Politis",
+            "memorialized": false,
+            "address": null,
+            "*memberRelationship": "urn:li:fsd_memberRelationship:ACoAAAkKAVABymOrwxccRD3PqOSyOBrMIM45KLw",
+            "instantMessengers": [],
+            "tempStatusEmoji": null,
+            "weChatContactInfo": null,
+            "$recipeTypes": [
+                "com.linkedin.5e962a640cfe3594f5a3e0b0cb21bc6b"
+            ],
+            "twitterHandles": [],
+            "phoneNumbers": [],
+            "$type": "com.linkedin.voyager.dash.identity.profile.Profile",
+            "firstName": "Chloe A.",
+            "emailAddress": null,
+            "entityUrn": "urn:li:fsd_profile:ACoAAAkKAVABymOrwxccRD3PqOSyOBrMIM45KLw",
+            "tempStatus": null,
+            "websites": [
+                {
+                    "label": null,
+                    "category": "PORTFOLIO",
+                    "$recipeTypes": [
+                        "com.linkedin.91dbb8279e0615e79143ad1ed02013fa"
+                    ],
+                    "url": "www.chloepolitis.com",
+                    "$type": "com.linkedin.voyager.dash.identity.profile.Website"
+                },
+                {
+                    "label": "Twitter",
+                    "category": "OTHER",
+                    "$recipeTypes": [
+                        "com.linkedin.91dbb8279e0615e79143ad1ed02013fa"
+                    ],
+                    "url": "www.twitter.com/ChloePolitis",
+                    "$type": "com.linkedin.voyager.dash.identity.profile.Website"
+                },
+                {
+                    "label": "Forbes",
+                    "category": "OTHER",
+                    "$recipeTypes": [
+                        "com.linkedin.91dbb8279e0615e79143ad1ed02013fa"
+                    ],
+                    "url": "https://www.forbes.com/sites/forbescommunicationscouncil/people/chloepolitis/?sh=32d310232d19",
+                    "$type": "com.linkedin.voyager.dash.identity.profile.Website"
+                }
+            ],
+            "emailRequired": false,
+            "headline": "Social Media Director at Mount Sinai Health System",
+            "publicIdentifier": "chloepolitis"
+        },
+        {
+            "lastName": "nghi",
+            "memorialized": false,
+            "iweWarned": false,
+            "tempStatusEmoji": null,
+            "$recipeTypes": [
+                "com.linkedin.5e962a640cfe3594f5a3e0b0cb21bc6b"
+            ],
+            "$type": "com.linkedin.voyager.dash.identity.profile.Profile",
+            "firstName": "le",
+            "entityUrn": "urn:li:fsd_profile:ACoAADXDtbEBP6DXnfNOoEFalgQUcttTIsRSi0A",
+            "tempStatus": null,
+            "headline": "University of Economics Ho Chi Minh City",
+            "publicIdentifier": "le-nghi-529101212"
+        },
+        {
+            "entityUrn": "urn:li:fsd_memberRelationship:ACoAAAkKAVABymOrwxccRD3PqOSyOBrMIM45KLw",
+            "memberRelationship": {
+                "self": null,
+                "connection": null,
+                "noConnection": {
+                    "memberDistance": "OUT_OF_NETWORK",
+                    "$recipeTypes": [
+                        "com.linkedin.891e33f5629dc3536e45bcebe41d7abf"
+                    ],
+                    "invitation": {
+                        "noInvitation": {
+                            "*targetInviteeResolutionResult": "urn:li:fsd_profile:ACoAAAkKAVABymOrwxccRD3PqOSyOBrMIM45KLw",
+                            "$recipeTypes": [
+                                "com.linkedin.671ccfe3465395ff74d3f323f68c65a7"
+                            ],
+                            "invitationRelationshipForm": null,
+                            "$type": "com.linkedin.voyager.dash.relationships.invitation.NoInvitation",
+                            "*inviterResolutionResult": "urn:li:fsd_profile:ACoAADXDtbEBP6DXnfNOoEFalgQUcttTIsRSi0A"
+                        },
+                        "invitation": null
+                    },
+                    "$type": "com.linkedin.voyager.dash.relationships.NoConnection"
+                }
+            },
+            "memberRelationshipDataResolutionResult": {
+                "noInvitation": {
+                    "*targetInviteeResolutionResult": "urn:li:fsd_profile:ACoAAAkKAVABymOrwxccRD3PqOSyOBrMIM45KLw",
+                    "$recipeTypes": [
+                        "com.linkedin.671ccfe3465395ff74d3f323f68c65a7"
+                    ],
+                    "invitationRelationshipForm": null,
+                    "$type": "com.linkedin.voyager.dash.relationships.invitation.NoInvitation",
+                    "*inviterResolutionResult": "urn:li:fsd_profile:ACoAADXDtbEBP6DXnfNOoEFalgQUcttTIsRSi0A"
+                },
+                "connection": null,
+                "invitation": null
+            },
+            "$recipeTypes": [
+                "com.linkedin.f1ee49a5b9c2d3e51980b3d6a134ea4e"
+            ],
+            "$type": "com.linkedin.voyager.dash.relationships.MemberRelationship"
+        }
+    ]
+}

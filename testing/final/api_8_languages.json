@@ -1,0 +1,353 @@
+{
+    "data": {
+        "data": {
+            "identityDashProfileComponentsBySectionType": {
+                "metadata": {
+                    "headerStyledAsCard": false,
+                    "primaryAction": null,
+                    "showBackButton": false,
+                    "secondaryAction": null,
+                    "title": "Languages",
+                    "$recipeTypes": [
+                        "com.linkedin.1318552c87ee38d4d885187353a3175d"
+                    ],
+                    "tertiaryAction": null,
+                    "$type": "com.linkedin.voyager.dash.identity.profile.tetris.ComponentsCollectionMetadata"
+                },
+                "$recipeTypes": [
+                    "com.linkedin.01f6b59f4fc8f672704097bd2ac91752"
+                ],
+                "elements": [
+                    {
+                        "components": {
+                            "insightComponent": null,
+                            "carouselComponent": null,
+                            "textComponent": null,
+                            "profileContentCollectionsComponent": null,
+                            "entityComponent": null,
+                            "completionMeterComponent": null,
+                            "wwuAdsComponent": null,
+                            "fixedListComponent": null,
+                            "headerComponent": null,
+                            "nullStateComponent": null,
+                            "tabComponent": null,
+                            "entityPileComponent": null,
+                            "formElement": null,
+                            "promptComponent": null,
+                            "actionComponent": null,
+                            "*pagedListComponent": "urn:li:fsd_profilePagedListComponent:(ACoAAAkKAVABymOrwxccRD3PqOSyOBrMIM45KLw,LANGUAGES_VIEW_DETAILS,urn:li:fsd_profile:ACoAAAkKAVABymOrwxccRD3PqOSyOBrMIM45KLw,NONE,en_US)",
+                            "emptyStateComponent": null,
+                            "mediaComponent": null,
+                            "contentComponent": null,
+                            "miniUpdateUrn": null,
+                            "visibilitySettingButton": null
+                        },
+                        "$recipeTypes": [
+                            "com.linkedin.4eca547eb2d58d950169cc1349a17aa2"
+                        ],
+                        "useCardStyling": false,
+                        "$type": "com.linkedin.voyager.dash.identity.profile.tetris.Component"
+                    }
+                ],
+                "$type": "com.linkedin.restli.common.CollectionResponse"
+            },
+            "$recipeTypes": [
+                "com.linkedin.e8ca8eb13a02ec774b06c2de98a8612c"
+            ],
+            "$type": "com.linkedin.e8ca8eb13a02ec774b06c2de98a8612c"
+        }
+    },
+    "included": [
+        {
+            "components": {
+                "metadata": {
+                    "paginationToken": null,
+                    "$recipeTypes": [
+                        "com.linkedin.87b0cae8a60fbd033d0aa32b32072f78"
+                    ],
+                    "$type": "com.linkedin.voyager.dash.identity.profile.tetris.PagedComponentsCollectionMetadata"
+                },
+                "paging": {
+                    "count": 20,
+                    "start": 0,
+                    "total": 3,
+                    "$recipeTypes": [
+                        "com.linkedin.db5ef2d76498a3ed0fb4dc69b1c20127"
+                    ],
+                    "$type": "com.linkedin.restli.common.CollectionMetadata"
+                },
+                "$recipeTypes": [
+                    "com.linkedin.1c91023e162ae48bd4fbd06f5f11b470"
+                ],
+                "elements": [
+                    {
+                        "components": {
+                            "insightComponent": null,
+                            "carouselComponent": null,
+                            "textComponent": null,
+                            "entityComponent": {
+                                "metadata": null,
+                                "caption": {
+                                    "textDirection": "USER_LOCALE",
+                                    "text": "Native or bilingual proficiency",
+                                    "attributesV2": [],
+                                    "accessibilityTextAttributesV2": [],
+                                    "accessibilityText": "Native or bilingual proficiency",
+                                    "$recipeTypes": [
+                                        "com.linkedin.4eccd894dd43a1bea3a82d015b0b7fd0"
+                                    ],
+                                    "$type": "com.linkedin.voyager.dash.common.text.TextViewModel"
+                                },
+                                "subComponents": null,
+                                "iconEntityType": false,
+                                "tertiaryAction": null,
+                                "reorderableItem": null,
+                                "impressionTrackingMetadata": [],
+                                "secondaryAction": null,
+                                "titleV2": {
+                                    "padded": false,
+                                    "expandable": true,
+                                    "numInitialLinesToShow": null,
+                                    "actionTrackingMetadata": [],
+                                    "text": {
+                                        "textDirection": "USER_LOCALE",
+                                        "text": "English",
+                                        "attributesV2": [],
+                                        "accessibilityTextAttributesV2": [],
+                                        "accessibilityText": "English",
+                                        "$recipeTypes": [
+                                            "com.linkedin.4eccd894dd43a1bea3a82d015b0b7fd0"
+                                        ],
+                                        "$type": "com.linkedin.voyager.dash.common.text.TextViewModel"
+                                    },
+                                    "actionTarget": null,
+                                    "seeMoreControlName": null,
+                                    "$recipeTypes": [
+                                        "com.linkedin.90880522927849069c77838040cd4071"
+                                    ],
+                                    "$type": "com.linkedin.voyager.dash.identity.profile.tetris.TextComponent"
+                                },
+                                "image": null,
+                                "textActionTarget": null,
+                                "actionTrackingMetadata": [],
+                                "supplementaryInfo": null,
+                                "labelV2": null,
+                                "$recipeTypes": [
+                                    "com.linkedin.e266ab9fcf00e5e59b4a16d81a74dcbf"
+                                ],
+                                "$type": "com.linkedin.voyager.dash.identity.profile.tetris.EntityComponent",
+                                "badge": null,
+                                "padded": true,
+                                "size": "LARGE",
+                                "subtitle": null,
+                                "subtitleV2": null
+                            },
+                            "completionMeterComponent": null,
+                            "wwuAdsComponent": null,
+                            "fixedListComponent": null,
+                            "headerComponent": null,
+                            "nullStateComponent": null,
+                            "tabComponent": null,
+                            "entityPileComponent": null,
+                            "pagedListComponent": null,
+                            "formElement": null,
+                            "promptComponent": null,
+                            "actionComponent": null,
+                            "emptyStateComponent": null,
+                            "mediaComponent": null,
+                            "contentComponent": null,
+                            "miniUpdateUrn": null,
+                            "visibilitySettingButton": null
+                        },
+                        "$recipeTypes": [
+                            "com.linkedin.4eca547eb2d58d950169cc1349a17aa2"
+                        ],
+                        "useCardStyling": false,
+                        "$type": "com.linkedin.voyager.dash.identity.profile.tetris.Component"
+                    },
+                    {
+                        "components": {
+                            "insightComponent": null,
+                            "carouselComponent": null,
+                            "textComponent": null,
+                            "entityComponent": {
+                                "metadata": null,
+                                "caption": {
+                                    "textDirection": "USER_LOCALE",
+                                    "text": "Elementary proficiency",
+                                    "attributesV2": [],
+                                    "accessibilityTextAttributesV2": [],
+                                    "accessibilityText": "Elementary proficiency",
+                                    "$recipeTypes": [
+                                        "com.linkedin.4eccd894dd43a1bea3a82d015b0b7fd0"
+                                    ],
+                                    "$type": "com.linkedin.voyager.dash.common.text.TextViewModel"
+                                },
+                                "subComponents": null,
+                                "iconEntityType": false,
+                                "tertiaryAction": null,
+                                "reorderableItem": null,
+                                "impressionTrackingMetadata": [],
+                                "secondaryAction": null,
+                                "titleV2": {
+                                    "padded": false,
+                                    "expandable": true,
+                                    "numInitialLinesToShow": null,
+                                    "actionTrackingMetadata": [],
+                                    "text": {
+                                        "textDirection": "USER_LOCALE",
+                                        "text": "French",
+                                        "attributesV2": [],
+                                        "accessibilityTextAttributesV2": [],
+                                        "accessibilityText": "French",
+                                        "$recipeTypes": [
+                                            "com.linkedin.4eccd894dd43a1bea3a82d015b0b7fd0"
+                                        ],
+                                        "$type": "com.linkedin.voyager.dash.common.text.TextViewModel"
+                                    },
+                                    "actionTarget": null,
+                                    "seeMoreControlName": null,
+                                    "$recipeTypes": [
+                                        "com.linkedin.90880522927849069c77838040cd4071"
+                                    ],
+                                    "$type": "com.linkedin.voyager.dash.identity.profile.tetris.TextComponent"
+                                },
+                                "image": null,
+                                "textActionTarget": null,
+                                "actionTrackingMetadata": [],
+                                "supplementaryInfo": null,
+                                "labelV2": null,
+                                "$recipeTypes": [
+                                    "com.linkedin.e266ab9fcf00e5e59b4a16d81a74dcbf"
+                                ],
+                                "$type": "com.linkedin.voyager.dash.identity.profile.tetris.EntityComponent",
+                                "badge": null,
+                                "padded": true,
+                                "size": "LARGE",
+                                "subtitle": null,
+                                "subtitleV2": null
+                            },
+                            "completionMeterComponent": null,
+                            "wwuAdsComponent": null,
+                            "fixedListComponent": null,
+                            "headerComponent": null,
+                            "nullStateComponent": null,
+                            "tabComponent": null,
+                            "entityPileComponent": null,
+                            "pagedListComponent": null,
+                            "formElement": null,
+                            "promptComponent": null,
+                            "actionComponent": null,
+                            "emptyStateComponent": null,
+                            "mediaComponent": null,
+                            "contentComponent": null,
+                            "miniUpdateUrn": null,
+                            "visibilitySettingButton": null
+                        },
+                        "$recipeTypes": [
+                            "com.linkedin.4eca547eb2d58d950169cc1349a17aa2"
+                        ],
+                        "useCardStyling": false,
+                        "$type": "com.linkedin.voyager.dash.identity.profile.tetris.Component"
+                    },
+                    {
+                        "components": {
+                            "insightComponent": null,
+                            "carouselComponent": null,
+                            "textComponent": null,
+                            "entityComponent": {
+                                "metadata": null,
+                                "caption": {
+                                    "textDirection": "USER_LOCALE",
+                                    "text": "Native or bilingual proficiency",
+                                    "attributesV2": [],
+                                    "accessibilityTextAttributesV2": [],
+                                    "accessibilityText": "Native or bilingual proficiency",
+                                    "$recipeTypes": [
+                                        "com.linkedin.4eccd894dd43a1bea3a82d015b0b7fd0"
+                                    ],
+                                    "$type": "com.linkedin.voyager.dash.common.text.TextViewModel"
+                                },
+                                "subComponents": null,
+                                "iconEntityType": false,
+                                "tertiaryAction": null,
+                                "reorderableItem": null,
+                                "impressionTrackingMetadata": [],
+                                "secondaryAction": null,
+                                "titleV2": {
+                                    "padded": false,
+                                    "expandable": true,
+                                    "numInitialLinesToShow": null,
+                                    "actionTrackingMetadata": [],
+                                    "text": {
+                                        "textDirection": "USER_LOCALE",
+                                        "text": "Greek",
+                                        "attributesV2": [],
+                                        "accessibilityTextAttributesV2": [],
+                                        "accessibilityText": "Greek",
+                                        "$recipeTypes": [
+                                            "com.linkedin.4eccd894dd43a1bea3a82d015b0b7fd0"
+                                        ],
+                                        "$type": "com.linkedin.voyager.dash.common.text.TextViewModel"
+                                    },
+                                    "actionTarget": null,
+                                    "seeMoreControlName": null,
+                                    "$recipeTypes": [
+                                        "com.linkedin.90880522927849069c77838040cd4071"
+                                    ],
+                                    "$type": "com.linkedin.voyager.dash.identity.profile.tetris.TextComponent"
+                                },
+                                "image": null,
+                                "textActionTarget": null,
+                                "actionTrackingMetadata": [],
+                                "supplementaryInfo": null,
+                                "labelV2": null,
+                                "$recipeTypes": [
+                                    "com.linkedin.e266ab9fcf00e5e59b4a16d81a74dcbf"
+                                ],
+                                "$type": "com.linkedin.voyager.dash.identity.profile.tetris.EntityComponent",
+                                "badge": null,
+                                "padded": true,
+                                "size": "LARGE",
+                                "subtitle": null,
+                                "subtitleV2": null
+                            },
+                            "completionMeterComponent": null,
+                            "wwuAdsComponent": null,
+                            "fixedListComponent": null,
+                            "headerComponent": null,
+                            "nullStateComponent": null,
+                            "tabComponent": null,
+                            "entityPileComponent": null,
+                            "pagedListComponent": null,
+                            "formElement": null,
+                            "promptComponent": null,
+                            "actionComponent": null,
+                            "emptyStateComponent": null,
+                            "mediaComponent": null,
+                            "contentComponent": null,
+                            "miniUpdateUrn": null,
+                            "visibilitySettingButton": null
+                        },
+                        "$recipeTypes": [
+                            "com.linkedin.4eca547eb2d58d950169cc1349a17aa2"
+                        ],
+                        "useCardStyling": false,
+                        "$type": "com.linkedin.voyager.dash.identity.profile.tetris.Component"
+                    }
+                ],
+                "$type": "com.linkedin.restli.common.CollectionResponse"
+            },
+            "decorationType": "LINE_SEPARATED",
+            "padded": false,
+            "entityUrn": "urn:li:fsd_profilePagedListComponent:(ACoAAAkKAVABymOrwxccRD3PqOSyOBrMIM45KLw,LANGUAGES_VIEW_DETAILS,urn:li:fsd_profile:ACoAAAkKAVABymOrwxccRD3PqOSyOBrMIM45KLw,NONE,en_US)",
+            "reorderable": false,
+            "pageSize": 20,
+            "footerAction": null,
+            "$recipeTypes": [
+                "com.linkedin.dfdba9c9aa3144ebc8b1fd4ad660e629"
+            ],
+            "$type": "com.linkedin.voyager.dash.identity.profile.tetris.PagedListComponent"
+        }
+    ]
+}
