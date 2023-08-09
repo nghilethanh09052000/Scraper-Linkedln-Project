@@ -123,7 +123,7 @@ class ProfileUrlSpider(scrapy.Spider):
                 'accept-encoding': 'gzip, deflate, br',
                 'accept-language': 'en-US,en;q=0.9',
                 'csrf-token': csrf_token,
-                'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36 Edg/115.0.1901.188'
+                'user-agent':  utils.random_user_agent()
             },
             cookies = cookies,
             callback = self.get_people_urls,
@@ -334,18 +334,51 @@ class ProfileUrlSpider(scrapy.Spider):
 
     def get_experiences(self, response):
 
+        experiences = []
+
         csrf_token       = response.meta['csrf_token']
         mini_profile_urn = response.meta['mini_profile_urn']
         mini_profile     = response.meta['mini_profile']
         categories_data  = response.meta['categories_data']
         item             = response.meta['item']
-
         data = response.json() 
+        
+        includes =  [ i for i in data['included'] if 'components' in i ]
+
 
         for category_data in categories_data:
-            if 'EXPERIENCE' in category_data['entityUrn']:
-                return
-    
+            if 'EXPERIENCE' in category_data['entityUrn']: 
+                for include in includes:
+                    elements = include['components']['elements']
+                    for element in elements:
+                            if element['components']['entityComponent'] is not None:
+                                entity = element['components']['entityComponent']
+
+                                position = entity['titleV2']['text']['text'] 
+                                company  = entity['subtitle']['text'] if entity['subtitle'] else None
+                                company_linkedin_url = entity['image']['actionTarget'] if entity['image'] else entity['textActionTarget']
+
+                                experiences.append({   
+                                        'position': position,
+                                        'company': company,
+                                        'company_linkedin_url': company_linkedin_url
+                                    })
+        if experiences:
+            experiences = [ 
+                experience for experience in experiences 
+                if
+                  ( experience['company'] and not any(char.isdigit() for char in experience['company']) )  
+                  and
+                  "https://www.linkedin.com/search/results/" not in experience['company_linkedin_url']
+            ]
+
+        item = {
+            **item,
+            'experiences': experiences
+        }
+
+        yield item
+                     
     def get_education(self, response):
 
         csrf_token       = response.meta['csrf_token']
