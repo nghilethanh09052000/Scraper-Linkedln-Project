@@ -106,6 +106,7 @@ DOWNLOADER_MIDDLEWARES = {
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    #"linkedln.pipelines.PostgreSQLPipeline": 300,
+   "linkedln.pipelines.MongoDBPipeline": 400,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -143,5 +144,9 @@ POSTGRES_DB       = os.getenv('POSTGRES_DB')
 POSTGRES_USER     = os.getenv('POSTGRES_USER')
 POSTGRES_PASSWORD = os.getenv('POSTGRES_PASSWORD')
 POSTGRES_PORT     = os.getenv('POSTGRES_PORT')
+MONGO_DB_URL      = os.getenv('MONGO_DB_URL')  
+MONGO_DB_DATABASE = os.getenv('MONGO_DB_DATABASE') 
+COLLECTION_NAME   = os.getenv('COLLECTION_NAME') 
 LINKEDIN_USERNAME = os.getenv('LINKEDIN_USERNAME')
 LINKEDIN_PASSWORD = os.getenv('LINKEDIN_PASSWORD')
+ 

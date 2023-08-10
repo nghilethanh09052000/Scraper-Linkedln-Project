@@ -5,3 +5,4 @@ scrapy-selenium
 webdriver-manager
 psycopg2
 python-dotenv
+pymongo

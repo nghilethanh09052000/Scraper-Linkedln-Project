@@ -66,7 +66,7 @@ class LinkedlnCompanySpider(scrapy.Spider):
 
         desired_cookies = { cookie['name'] : cookie['value'].replace('"',"") for cookie in cookies }
 
-        keyword = self.keyword
+        keyword = self.keyword if self.keyword  else 'a'
        
         yield scrapy.Request(
             url = f'https://www.linkedin.com/voyager/api/graphql?variables=(start:{str(self.count)},origin:SWITCH_SEARCH_VERTICAL,query:(keywords:{keyword},flagshipSearchIntent:SEARCH_SRP,queryParameters:List((key:resultType,value:List(COMPANIES))),includeFiltersInResponse:false))&&queryId=voyagerSearchDashClusters.a789a8e572711844816fa31872de1e2f',
