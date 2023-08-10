@@ -91,7 +91,9 @@ SELENIUM_DRIVER_ARGUMENTS=['--headless']
 
 DOWNLOADER_MIDDLEWARES = {
    #"linkedln.middlewares.ShowRequestsHeadersMiddleWare": 543,
+   "linkedln.middlewares.TooManyRequestsRetryMiddleware": 550,
    'scrapy_selenium.SeleniumMiddleware': 800
+
 }
 
 # Enable or disable extensions
@@ -130,6 +132,7 @@ ITEM_PIPELINES = {
 # Set settings whose default value is deprecated to a future-proof value
 
 FEED_EXPORT_ENCODING = "utf-8"
+RETRY_HTTP_CODES = [429]
 
 from dotenv import load_dotenv
 import os

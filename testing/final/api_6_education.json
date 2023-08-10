@@ -35,7 +35,7 @@
                             "formElement": null,
                             "promptComponent": null,
                             "actionComponent": null,
-                            "*pagedListComponent": "urn:li:fsd_profilePagedListComponent:(ACoAAAkKAVABymOrwxccRD3PqOSyOBrMIM45KLw,EDUCATION_VIEW_DETAILS,urn:li:fsd_profile:ACoAAAkKAVABymOrwxccRD3PqOSyOBrMIM45KLw,NONE,en_US)",
+                            "*pagedListComponent": "urn:li:fsd_profilePagedListComponent:(ACoAAA2lYucBCRP_Wqy3TPGMmDbdqP-n0V7RLvU,EDUCATION_VIEW_DETAILS,urn:li:fsd_profile:ACoAAA2lYucBCRP_Wqy3TPGMmDbdqP-n0V7RLvU,NONE,en_US)",
                             "emptyStateComponent": null,
                             "mediaComponent": null,
                             "contentComponent": null,
@@ -70,7 +70,7 @@
                 "paging": {
                     "count": 20,
                     "start": 0,
-                    "total": 2,
+                    "total": 4,
                     "$recipeTypes": [
                         "com.linkedin.db5ef2d76498a3ed0fb4dc69b1c20127"
                     ],
@@ -89,10 +89,10 @@
                                 "metadata": null,
                                 "caption": {
                                     "textDirection": "USER_LOCALE",
-                                    "text": "2013 - 2015",
+                                    "text": "2013 - 2014",
                                     "attributesV2": [],
                                     "accessibilityTextAttributesV2": [],
-                                    "accessibilityText": "2013 - 2015",
+                                    "accessibilityText": "2013 - 2014",
                                     "$recipeTypes": [
                                         "com.linkedin.4eccd894dd43a1bea3a82d015b0b7fd0"
                                     ],
@@ -164,10 +164,10 @@
                                     "actionTrackingMetadata": [],
                                     "text": {
                                         "textDirection": "USER_LOCALE",
-                                        "text": "Sarah Lawrence College",
+                                        "text": "Florida International University",
                                         "attributesV2": [],
                                         "accessibilityTextAttributesV2": [],
-                                        "accessibilityText": "Sarah Lawrence College",
+                                        "accessibilityText": "Florida International University",
                                         "$recipeTypes": [
                                             "com.linkedin.4eccd894dd43a1bea3a82d015b0b7fd0"
                                         ],
@@ -189,7 +189,7 @@
                                                 "profilePictureWithRingStatus": null,
                                                 "icon": null,
                                                 "systemImage": null,
-                                                "*companyLogo": "urn:li:fsd_company:165853",
+                                                "*companyLogo": "urn:li:fsd_company:6910",
                                                 "nonEntityGroupLogo": null,
                                                 "vectorImage": null,
                                                 "nonEntityProfessionalEventLogo": null,
@@ -213,16 +213,16 @@
                                         }
                                     ],
                                     "editableAccessibilityText": false,
-                                    "actionTarget": "https://www.linkedin.com/company/165853/",
+                                    "actionTarget": "https://www.linkedin.com/company/6910/",
                                     "accessibilityTextAttributes": [],
                                     "totalCount": null,
-                                    "accessibilityText": "Sarah Lawrence College logo",
+                                    "accessibilityText": "Florida International University logo",
                                     "$recipeTypes": [
                                         "com.linkedin.81c90db1141f88d582081417f62c335b"
                                     ],
                                     "$type": "com.linkedin.voyager.dash.common.image.ImageViewModel"
                                 },
-                                "textActionTarget": "https://www.linkedin.com/company/165853/",
+                                "textActionTarget": "https://www.linkedin.com/company/6910/",
                                 "actionTrackingMetadata": [],
                                 "supplementaryInfo": null,
                                 "labelV2": null,
@@ -235,10 +235,10 @@
                                 "size": "LARGE",
                                 "subtitle": {
                                     "textDirection": "USER_LOCALE",
-                                    "text": "Master of Arts (M.A.), Health Advocacy",
+                                    "text": "Bachelor of Science (BS), Computer Science",
                                     "attributesV2": [],
                                     "accessibilityTextAttributesV2": [],
-                                    "accessibilityText": "Master of Arts (M.A.), Health Advocacy",
+                                    "accessibilityText": "Bachelor of Science (BS), Computer Science",
                                     "$recipeTypes": [
                                         "com.linkedin.4eccd894dd43a1bea3a82d015b0b7fd0"
                                     ],
@@ -278,10 +278,10 @@
                                 "metadata": null,
                                 "caption": {
                                     "textDirection": "USER_LOCALE",
-                                    "text": "2010 - 2013",
+                                    "text": "2011 - 2013",
                                     "attributesV2": [],
                                     "accessibilityTextAttributesV2": [],
-                                    "accessibilityText": "2010 - 2013",
+                                    "accessibilityText": "2011 - 2013",
                                     "$recipeTypes": [
                                         "com.linkedin.4eccd894dd43a1bea3a82d015b0b7fd0"
                                     ],
@@ -305,10 +305,10 @@
                                                         "actionTrackingMetadata": [],
                                                         "text": {
                                                             "textDirection": "USER_LOCALE",
-                                                            "text": "Activities and societies: Hellenic Society at Lincoln Center",
+                                                            "text": "Activities and societies: Phi Theta Kappa Honor Society",
                                                             "attributesV2": [],
                                                             "accessibilityTextAttributesV2": [],
-                                                            "accessibilityText": "Activities and societies: Hellenic Society at Lincoln Center",
+                                                            "accessibilityText": "Activities and societies: Phi Theta Kappa Honor Society",
                                                             "$recipeTypes": [
                                                                 "com.linkedin.4eccd894dd43a1bea3a82d015b0b7fd0"
                                                             ],
@@ -416,10 +416,10 @@
                                     "actionTrackingMetadata": [],
                                     "text": {
                                         "textDirection": "USER_LOCALE",
-                                        "text": "Fordham University",
+                                        "text": "Miami Dade College",
                                         "attributesV2": [],
                                         "accessibilityTextAttributesV2": [],
-                                        "accessibilityText": "Fordham University",
+                                        "accessibilityText": "Miami Dade College",
                                         "$recipeTypes": [
                                             "com.linkedin.4eccd894dd43a1bea3a82d015b0b7fd0"
                                         ],
@@ -441,7 +441,7 @@
                                                 "profilePictureWithRingStatus": null,
                                                 "icon": null,
                                                 "systemImage": null,
-                                                "*companyLogo": "urn:li:fsd_company:7338",
+                                                "*companyLogo": "urn:li:fsd_company:12397",
                                                 "nonEntityGroupLogo": null,
                                                 "vectorImage": null,
                                                 "nonEntityProfessionalEventLogo": null,
@@ -465,16 +465,16 @@
                                         }
                                     ],
                                     "editableAccessibilityText": false,
-                                    "actionTarget": "https://www.linkedin.com/company/7338/",
+                                    "actionTarget": "https://www.linkedin.com/company/12397/",
                                     "accessibilityTextAttributes": [],
                                     "totalCount": null,
-                                    "accessibilityText": "Fordham University logo",
+                                    "accessibilityText": "Miami Dade College logo",
                                     "$recipeTypes": [
                                         "com.linkedin.81c90db1141f88d582081417f62c335b"
                                     ],
                                     "$type": "com.linkedin.voyager.dash.common.image.ImageViewModel"
                                 },
-                                "textActionTarget": "https://www.linkedin.com/company/7338/",
+                                "textActionTarget": "https://www.linkedin.com/company/12397/",
                                 "actionTrackingMetadata": [],
                                 "supplementaryInfo": null,
                                 "labelV2": null,
@@ -487,15 +487,383 @@
                                 "size": "LARGE",
                                 "subtitle": {
                                     "textDirection": "USER_LOCALE",
-                                    "text": "Bachelor of Arts (BA), English Language and Literature, General",
+                                    "text": "Associate of Arts (AA), Computer Science",
                                     "attributesV2": [],
                                     "accessibilityTextAttributesV2": [],
-                                    "accessibilityText": "Bachelor of Arts (BA), English Language and Literature, General",
+                                    "accessibilityText": "Associate of Arts (AA), Computer Science",
                                     "$recipeTypes": [
                                         "com.linkedin.4eccd894dd43a1bea3a82d015b0b7fd0"
                                     ],
                                     "$type": "com.linkedin.voyager.dash.common.text.TextViewModel"
                                 },
+                                "subtitleV2": null
+                            },
+                            "completionMeterComponent": null,
+                            "wwuAdsComponent": null,
+                            "fixedListComponent": null,
+                            "headerComponent": null,
+                            "nullStateComponent": null,
+                            "tabComponent": null,
+                            "entityPileComponent": null,
+                            "pagedListComponent": null,
+                            "formElement": null,
+                            "promptComponent": null,
+                            "actionComponent": null,
+                            "emptyStateComponent": null,
+                            "mediaComponent": null,
+                            "contentComponent": null,
+                            "miniUpdateUrn": null,
+                            "visibilitySettingButton": null
+                        },
+                        "$recipeTypes": [
+                            "com.linkedin.4eca547eb2d58d950169cc1349a17aa2"
+                        ],
+                        "useCardStyling": false,
+                        "$type": "com.linkedin.voyager.dash.identity.profile.tetris.Component"
+                    },
+                    {
+                        "components": {
+                            "insightComponent": null,
+                            "carouselComponent": null,
+                            "textComponent": null,
+                            "entityComponent": {
+                                "metadata": null,
+                                "caption": {
+                                    "textDirection": "USER_LOCALE",
+                                    "text": "2008 - 2011",
+                                    "attributesV2": [],
+                                    "accessibilityTextAttributesV2": [],
+                                    "accessibilityText": "2008 - 2011",
+                                    "$recipeTypes": [
+                                        "com.linkedin.4eccd894dd43a1bea3a82d015b0b7fd0"
+                                    ],
+                                    "$type": "com.linkedin.voyager.dash.common.text.TextViewModel"
+                                },
+                                "subComponents": {
+                                    "numInitialComponentsToShow": 1,
+                                    "components": [
+                                        {
+                                            "components": {
+                                                "insightComponent": null,
+                                                "carouselComponent": null,
+                                                "textComponent": null,
+                                                "entityComponent": null,
+                                                "completionMeterComponent": null,
+                                                "wwuAdsComponent": null,
+                                                "fixedListComponent": {
+                                                    "numInitialComponentsToShow": 0,
+                                                    "actionDelegateUrn": null,
+                                                    "components": [],
+                                                    "decorationType": "TOP_PADDED",
+                                                    "padded": false,
+                                                    "footerAction": null,
+                                                    "title": null,
+                                                    "$recipeTypes": [
+                                                        "com.linkedin.e9c4170da93a8b3f6b146e8a326b548b"
+                                                    ],
+                                                    "$type": "com.linkedin.voyager.dash.identity.profile.tetris.FixedListComponent"
+                                                },
+                                                "headerComponent": null,
+                                                "nullStateComponent": null,
+                                                "tabComponent": null,
+                                                "entityPileComponent": null,
+                                                "pagedListComponent": null,
+                                                "formElement": null,
+                                                "promptComponent": null,
+                                                "actionComponent": null,
+                                                "emptyStateComponent": null,
+                                                "mediaComponent": null,
+                                                "contentComponent": null,
+                                                "miniUpdateUrn": null,
+                                                "visibilitySettingButton": null
+                                            },
+                                            "$recipeTypes": [
+                                                "com.linkedin.4eca547eb2d58d950169cc1349a17aa2"
+                                            ],
+                                            "useCardStyling": false,
+                                            "$type": "com.linkedin.voyager.dash.identity.profile.tetris.Component"
+                                        }
+                                    ],
+                                    "decorationType": "NONE",
+                                    "padded": false,
+                                    "footerAction": null,
+                                    "title": null,
+                                    "$recipeTypes": [
+                                        "com.linkedin.e9c4170da93a8b3f6b146e8a326b548b"
+                                    ],
+                                    "$type": "com.linkedin.voyager.dash.identity.profile.tetris.FixedListComponent"
+                                },
+                                "iconEntityType": false,
+                                "tertiaryAction": null,
+                                "reorderableItem": null,
+                                "impressionTrackingMetadata": [],
+                                "secondaryAction": null,
+                                "titleV2": {
+                                    "padded": false,
+                                    "expandable": true,
+                                    "numInitialLinesToShow": null,
+                                    "actionTrackingMetadata": [],
+                                    "text": {
+                                        "textDirection": "USER_LOCALE",
+                                        "text": "University of Havana",
+                                        "attributesV2": [],
+                                        "accessibilityTextAttributesV2": [],
+                                        "accessibilityText": "University of Havana",
+                                        "$recipeTypes": [
+                                            "com.linkedin.4eccd894dd43a1bea3a82d015b0b7fd0"
+                                        ],
+                                        "$type": "com.linkedin.voyager.dash.common.text.TextViewModel"
+                                    },
+                                    "actionTarget": null,
+                                    "seeMoreControlName": null,
+                                    "$recipeTypes": [
+                                        "com.linkedin.90880522927849069c77838040cd4071"
+                                    ],
+                                    "$type": "com.linkedin.voyager.dash.identity.profile.tetris.TextComponent"
+                                },
+                                "image": {
+                                    "attributes": [
+                                        {
+                                            "scalingType": null,
+                                            "detailData": {
+                                                "profilePictureWithoutFrame": null,
+                                                "profilePictureWithRingStatus": null,
+                                                "companyLogo": null,
+                                                "icon": null,
+                                                "systemImage": null,
+                                                "nonEntityGroupLogo": null,
+                                                "vectorImage": null,
+                                                "nonEntityProfessionalEventLogo": null,
+                                                "profilePicture": null,
+                                                "imageUrl": null,
+                                                "professionalEventLogo": null,
+                                                "nonEntityCompanyLogo": null,
+                                                "nonEntitySchoolLogo": null,
+                                                "groupLogo": null,
+                                                "schoolLogo": null,
+                                                "ghostImage": "SCHOOL",
+                                                "nonEntityProfilePicture": null
+                                            },
+                                            "tintColor": null,
+                                            "$recipeTypes": [
+                                                "com.linkedin.6dbb5c06323c45a01d45cd215ae317c6"
+                                            ],
+                                            "tapTargets": [],
+                                            "displayAspectRatio": null,
+                                            "$type": "com.linkedin.voyager.dash.common.image.ImageAttribute"
+                                        }
+                                    ],
+                                    "editableAccessibilityText": false,
+                                    "actionTarget": null,
+                                    "accessibilityTextAttributes": [],
+                                    "totalCount": null,
+                                    "accessibilityText": null,
+                                    "$recipeTypes": [
+                                        "com.linkedin.81c90db1141f88d582081417f62c335b"
+                                    ],
+                                    "$type": "com.linkedin.voyager.dash.common.image.ImageViewModel"
+                                },
+                                "textActionTarget": "https://www.linkedin.com/search/results/all/?keywords=University+of+Havana",
+                                "actionTrackingMetadata": [],
+                                "supplementaryInfo": null,
+                                "labelV2": null,
+                                "$recipeTypes": [
+                                    "com.linkedin.e266ab9fcf00e5e59b4a16d81a74dcbf"
+                                ],
+                                "$type": "com.linkedin.voyager.dash.identity.profile.tetris.EntityComponent",
+                                "badge": null,
+                                "padded": true,
+                                "size": "LARGE",
+                                "subtitle": {
+                                    "textDirection": "USER_LOCALE",
+                                    "text": "Computer Science",
+                                    "attributesV2": [],
+                                    "accessibilityTextAttributesV2": [],
+                                    "accessibilityText": "Computer Science",
+                                    "$recipeTypes": [
+                                        "com.linkedin.4eccd894dd43a1bea3a82d015b0b7fd0"
+                                    ],
+                                    "$type": "com.linkedin.voyager.dash.common.text.TextViewModel"
+                                },
+                                "subtitleV2": null
+                            },
+                            "completionMeterComponent": null,
+                            "wwuAdsComponent": null,
+                            "fixedListComponent": null,
+                            "headerComponent": null,
+                            "nullStateComponent": null,
+                            "tabComponent": null,
+                            "entityPileComponent": null,
+                            "pagedListComponent": null,
+                            "formElement": null,
+                            "promptComponent": null,
+                            "actionComponent": null,
+                            "emptyStateComponent": null,
+                            "mediaComponent": null,
+                            "contentComponent": null,
+                            "miniUpdateUrn": null,
+                            "visibilitySettingButton": null
+                        },
+                        "$recipeTypes": [
+                            "com.linkedin.4eca547eb2d58d950169cc1349a17aa2"
+                        ],
+                        "useCardStyling": false,
+                        "$type": "com.linkedin.voyager.dash.identity.profile.tetris.Component"
+                    },
+                    {
+                        "components": {
+                            "insightComponent": null,
+                            "carouselComponent": null,
+                            "textComponent": null,
+                            "entityComponent": {
+                                "metadata": null,
+                                "caption": {
+                                    "textDirection": "USER_LOCALE",
+                                    "text": "2004 - 2007",
+                                    "attributesV2": [],
+                                    "accessibilityTextAttributesV2": [],
+                                    "accessibilityText": "2004 - 2007",
+                                    "$recipeTypes": [
+                                        "com.linkedin.4eccd894dd43a1bea3a82d015b0b7fd0"
+                                    ],
+                                    "$type": "com.linkedin.voyager.dash.common.text.TextViewModel"
+                                },
+                                "subComponents": {
+                                    "numInitialComponentsToShow": 1,
+                                    "components": [
+                                        {
+                                            "components": {
+                                                "insightComponent": null,
+                                                "carouselComponent": null,
+                                                "textComponent": null,
+                                                "entityComponent": null,
+                                                "completionMeterComponent": null,
+                                                "wwuAdsComponent": null,
+                                                "fixedListComponent": {
+                                                    "numInitialComponentsToShow": 0,
+                                                    "actionDelegateUrn": null,
+                                                    "components": [],
+                                                    "decorationType": "TOP_PADDED",
+                                                    "padded": false,
+                                                    "footerAction": null,
+                                                    "title": null,
+                                                    "$recipeTypes": [
+                                                        "com.linkedin.e9c4170da93a8b3f6b146e8a326b548b"
+                                                    ],
+                                                    "$type": "com.linkedin.voyager.dash.identity.profile.tetris.FixedListComponent"
+                                                },
+                                                "headerComponent": null,
+                                                "nullStateComponent": null,
+                                                "tabComponent": null,
+                                                "entityPileComponent": null,
+                                                "pagedListComponent": null,
+                                                "formElement": null,
+                                                "promptComponent": null,
+                                                "actionComponent": null,
+                                                "emptyStateComponent": null,
+                                                "mediaComponent": null,
+                                                "contentComponent": null,
+                                                "miniUpdateUrn": null,
+                                                "visibilitySettingButton": null
+                                            },
+                                            "$recipeTypes": [
+                                                "com.linkedin.4eca547eb2d58d950169cc1349a17aa2"
+                                            ],
+                                            "useCardStyling": false,
+                                            "$type": "com.linkedin.voyager.dash.identity.profile.tetris.Component"
+                                        }
+                                    ],
+                                    "decorationType": "NONE",
+                                    "padded": false,
+                                    "footerAction": null,
+                                    "title": null,
+                                    "$recipeTypes": [
+                                        "com.linkedin.e9c4170da93a8b3f6b146e8a326b548b"
+                                    ],
+                                    "$type": "com.linkedin.voyager.dash.identity.profile.tetris.FixedListComponent"
+                                },
+                                "iconEntityType": false,
+                                "tertiaryAction": null,
+                                "reorderableItem": null,
+                                "impressionTrackingMetadata": [],
+                                "secondaryAction": null,
+                                "titleV2": {
+                                    "padded": false,
+                                    "expandable": true,
+                                    "numInitialLinesToShow": null,
+                                    "actionTrackingMetadata": [],
+                                    "text": {
+                                        "textDirection": "USER_LOCALE",
+                                        "text": "IPVCE Federico Engels",
+                                        "attributesV2": [],
+                                        "accessibilityTextAttributesV2": [],
+                                        "accessibilityText": "IPVCE Federico Engels",
+                                        "$recipeTypes": [
+                                            "com.linkedin.4eccd894dd43a1bea3a82d015b0b7fd0"
+                                        ],
+                                        "$type": "com.linkedin.voyager.dash.common.text.TextViewModel"
+                                    },
+                                    "actionTarget": null,
+                                    "seeMoreControlName": null,
+                                    "$recipeTypes": [
+                                        "com.linkedin.90880522927849069c77838040cd4071"
+                                    ],
+                                    "$type": "com.linkedin.voyager.dash.identity.profile.tetris.TextComponent"
+                                },
+                                "image": {
+                                    "attributes": [
+                                        {
+                                            "scalingType": null,
+                                            "detailData": {
+                                                "profilePictureWithoutFrame": null,
+                                                "profilePictureWithRingStatus": null,
+                                                "companyLogo": null,
+                                                "icon": null,
+                                                "systemImage": null,
+                                                "nonEntityGroupLogo": null,
+                                                "vectorImage": null,
+                                                "nonEntityProfessionalEventLogo": null,
+                                                "profilePicture": null,
+                                                "imageUrl": null,
+                                                "professionalEventLogo": null,
+                                                "nonEntityCompanyLogo": null,
+                                                "nonEntitySchoolLogo": null,
+                                                "groupLogo": null,
+                                                "schoolLogo": null,
+                                                "ghostImage": "SCHOOL",
+                                                "nonEntityProfilePicture": null
+                                            },
+                                            "tintColor": null,
+                                            "$recipeTypes": [
+                                                "com.linkedin.6dbb5c06323c45a01d45cd215ae317c6"
+                                            ],
+                                            "tapTargets": [],
+                                            "displayAspectRatio": null,
+                                            "$type": "com.linkedin.voyager.dash.common.image.ImageAttribute"
+                                        }
+                                    ],
+                                    "editableAccessibilityText": false,
+                                    "actionTarget": null,
+                                    "accessibilityTextAttributes": [],
+                                    "totalCount": null,
+                                    "accessibilityText": null,
+                                    "$recipeTypes": [
+                                        "com.linkedin.81c90db1141f88d582081417f62c335b"
+                                    ],
+                                    "$type": "com.linkedin.voyager.dash.common.image.ImageViewModel"
+                                },
+                                "textActionTarget": "https://www.linkedin.com/search/results/all/?keywords=IPVCE+Federico+Engels",
+                                "actionTrackingMetadata": [],
+                                "supplementaryInfo": null,
+                                "labelV2": null,
+                                "$recipeTypes": [
+                                    "com.linkedin.e266ab9fcf00e5e59b4a16d81a74dcbf"
+                                ],
+                                "$type": "com.linkedin.voyager.dash.identity.profile.tetris.EntityComponent",
+                                "badge": null,
+                                "padded": true,
+                                "size": "LARGE",
+                                "subtitle": null,
                                 "subtitleV2": null
                             },
                             "completionMeterComponent": null,
@@ -526,7 +894,7 @@
             },
             "decorationType": "LINE_SEPARATED",
             "padded": false,
-            "entityUrn": "urn:li:fsd_profilePagedListComponent:(ACoAAAkKAVABymOrwxccRD3PqOSyOBrMIM45KLw,EDUCATION_VIEW_DETAILS,urn:li:fsd_profile:ACoAAAkKAVABymOrwxccRD3PqOSyOBrMIM45KLw,NONE,en_US)",
+            "entityUrn": "urn:li:fsd_profilePagedListComponent:(ACoAAA2lYucBCRP_Wqy3TPGMmDbdqP-n0V7RLvU,EDUCATION_VIEW_DETAILS,urn:li:fsd_profile:ACoAAA2lYucBCRP_Wqy3TPGMmDbdqP-n0V7RLvU,NONE,en_US)",
             "reorderable": false,
             "pageSize": 20,
             "footerAction": null,
@@ -536,11 +904,11 @@
             "$type": "com.linkedin.voyager.dash.identity.profile.tetris.PagedListComponent"
         },
         {
-            "entityUrn": "urn:li:fsd_company:165853",
+            "entityUrn": "urn:li:fsd_company:12397",
             "logoResolutionResult": {
                 "url": null,
                 "vectorImage": {
-                    "digitalmediaAsset": "urn:li:digitalmediaAsset:C4E0BAQFJULJ21WpBLQ",
+                    "digitalmediaAsset": "urn:li:digitalmediaAsset:C560BAQEzV8OIL7Pkfg",
                     "attribution": null,
                     "$recipeTypes": [
                         "com.linkedin.8579bdadc525c8c0455b05de178cee07"
@@ -551,7 +919,7 @@
                             "$recipeTypes": [
                                 "com.linkedin.2be5282dcbf0403956f8604906664b46"
                             ],
-                            "fileIdentifyingUrlPathSegment": "200_200/0/1673534820156?e=1699488000&v=beta&t=uoI9gQyELww8sekfxV6CP97B0HwuRXqr-1JgYFn6UBU",
+                            "fileIdentifyingUrlPathSegment": "200_200/0/1546872125300?e=1699488000&v=beta&t=E1QTm4aMcQ5rNECTJfBiMPh3syE3QizkwBIrAepzC6U",
                             "expiresAt": 1699488000000,
                             "height": 200,
                             "$type": "com.linkedin.common.VectorArtifact"
@@ -561,7 +929,7 @@
                             "$recipeTypes": [
                                 "com.linkedin.2be5282dcbf0403956f8604906664b46"
                             ],
-                            "fileIdentifyingUrlPathSegment": "100_100/0/1673534820156?e=1699488000&v=beta&t=AjIZ_-Hdu7yZFFg1052Gc6y1jUiAfLHovp2qL7icsX8",
+                            "fileIdentifyingUrlPathSegment": "100_100/0/1546872125300?e=1699488000&v=beta&t=F9dqtpPPWfME3qT0mvd5cqYaZjhyKT_ud37xpUWb3BI",
                             "expiresAt": 1699488000000,
                             "height": 100,
                             "$type": "com.linkedin.common.VectorArtifact"
@@ -571,13 +939,13 @@
                             "$recipeTypes": [
                                 "com.linkedin.2be5282dcbf0403956f8604906664b46"
                             ],
-                            "fileIdentifyingUrlPathSegment": "400_400/0/1673534820156?e=1699488000&v=beta&t=TXZwVXYvdZNacYy1-98xiDbnn_9ZPSLSnR_aJ3BCW_M",
+                            "fileIdentifyingUrlPathSegment": "400_400/0/1546872125300?e=1699488000&v=beta&t=AaX3Dd7hB6RayzFQ6Szf9N_moaF4QG-ORhY-y7Mw7jg",
                             "expiresAt": 1699488000000,
                             "height": 400,
                             "$type": "com.linkedin.common.VectorArtifact"
                         }
                     ],
-                    "rootUrl": "https://media.licdn.com/dms/image/C4E0BAQFJULJ21WpBLQ/company-logo_",
+                    "rootUrl": "https://media.licdn.com/dms/image/C560BAQEzV8OIL7Pkfg/company-logo_",
                     "$type": "com.linkedin.common.VectorImage"
                 }
             },
@@ -587,11 +955,11 @@
             "$type": "com.linkedin.voyager.dash.organization.Company"
         },
         {
-            "entityUrn": "urn:li:fsd_company:7338",
+            "entityUrn": "urn:li:fsd_company:6910",
             "logoResolutionResult": {
                 "url": null,
                 "vectorImage": {
-                    "digitalmediaAsset": "urn:li:digitalmediaAsset:C4E0BAQFRiFiBbZn5sA",
+                    "digitalmediaAsset": "urn:li:digitalmediaAsset:D4E0BAQESumC9ySWbYA",
                     "attribution": null,
                     "$recipeTypes": [
                         "com.linkedin.8579bdadc525c8c0455b05de178cee07"
@@ -602,7 +970,7 @@
                             "$recipeTypes": [
                                 "com.linkedin.2be5282dcbf0403956f8604906664b46"
                             ],
-                            "fileIdentifyingUrlPathSegment": "200_200/0/1669817337132?e=1699488000&v=beta&t=xshnSP3KWit0FY51wCCFAgHVmeYKeHPOQNMz35rQ2FA",
+                            "fileIdentifyingUrlPathSegment": "200_200/0/1666125777673?e=1699488000&v=beta&t=Z64qGKkKRyWSistjMPVcStMdUcUSI49vgl5mj4yBjg4",
                             "expiresAt": 1699488000000,
                             "height": 200,
                             "$type": "com.linkedin.common.VectorArtifact"
@@ -612,7 +980,7 @@
                             "$recipeTypes": [
                                 "com.linkedin.2be5282dcbf0403956f8604906664b46"
                             ],
-                            "fileIdentifyingUrlPathSegment": "100_100/0/1669817337132?e=1699488000&v=beta&t=UsMKMAi0lswTqQVxiwjmeMAKGECi96wGxFBkg24QzD8",
+                            "fileIdentifyingUrlPathSegment": "100_100/0/1666125777673?e=1699488000&v=beta&t=2fMDCAQ_H6WnnDPoOqptGhOF4AfzL9zMcK3_kR7TZZY",
                             "expiresAt": 1699488000000,
                             "height": 100,
                             "$type": "com.linkedin.common.VectorArtifact"
@@ -622,13 +990,13 @@
                             "$recipeTypes": [
                                 "com.linkedin.2be5282dcbf0403956f8604906664b46"
                             ],
-                            "fileIdentifyingUrlPathSegment": "400_400/0/1669817337132?e=1699488000&v=beta&t=nq90BnojUrX4spUG-lTZ6J1tvPGi5uGCcPz-nhZM2-w",
+                            "fileIdentifyingUrlPathSegment": "400_400/0/1666125777673?e=1699488000&v=beta&t=9m7BQ6PMVv2mMxwcQg2WxE9YroF-L7Wgdywm6CiO-fc",
                             "expiresAt": 1699488000000,
                             "height": 400,
                             "$type": "com.linkedin.common.VectorArtifact"
                         }
                     ],
-                    "rootUrl": "https://media.licdn.com/dms/image/C4E0BAQFRiFiBbZn5sA/company-logo_",
+                    "rootUrl": "https://media.licdn.com/dms/image/D4E0BAQESumC9ySWbYA/company-logo_",
                     "$type": "com.linkedin.common.VectorImage"
                 }
             },
