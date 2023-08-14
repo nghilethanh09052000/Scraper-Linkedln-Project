@@ -106,7 +106,7 @@ DOWNLOADER_MIDDLEWARES = {
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    #"linkedln.pipelines.PostgreSQLPipeline": 300,
-   "linkedln.pipelines.MongoDBPipeline": 400,
+   #"linkedln.pipelines.MongoDBPipeline": 400,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

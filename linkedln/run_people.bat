@@ -2,7 +2,7 @@
 setlocal enabledelayedexpansion
 
 REM Define the list of alphabet letters
-set "letters=bcdefghijklmnopqrstuvwxyz"
+set "letters=abcdefghijklmnopqrstuvwxyz"
 
 REM Loop through each letter and call scrapy crawl with the -a keyword argument
 for /L %%i in (0, 1, 25) do (

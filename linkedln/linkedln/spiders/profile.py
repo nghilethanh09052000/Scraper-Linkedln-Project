@@ -11,7 +11,7 @@ import re
 
 class ProfileUrlSpider(scrapy.Spider):
 
-    name = "people_url"
+    name = "people"
     count = 0
 
     def handle_error(self, failure):
@@ -88,9 +88,10 @@ class ProfileUrlSpider(scrapy.Spider):
         csrf_token =  next((cookie for cookie in cookies_string if cookie['name'] == 'JSESSIONID'), None)['value'].replace('"',"")
         cookies = { cookie['name'] : cookie['value'].replace('"',"") for cookie in cookies_string }
 
-        
+        keyword = self.keyword if self.keyword  else 'a'
+
         yield scrapy.Request(
-            url = f'https://www.linkedin.com/voyager/api/graphql?variables=(start:{self.count},origin:FACETED_SEARCH,query:(keywords:a,flagshipSearchIntent:SEARCH_SRP,queryParameters:List((key:currentCompany,value:List(1035,1441,11864448,1337,5597)),(key:geoUrn,value:List(103644278)),(key:resultType,value:List(PEOPLE))),includeFiltersInResponse:false))&&queryId=voyagerSearchDashClusters.a789a8e572711844816fa31872de1e2f',
+            url = f'https://www.linkedin.com/voyager/api/graphql?variables=(start:{self.count},origin:FACETED_SEARCH,query:(keywords:{keyword},flagshipSearchIntent:SEARCH_SRP,queryParameters:List((key:currentCompany,value:List(1035,1441,11864448,1337,5597)),(key:geoUrn,value:List(103644278)),(key:resultType,value:List(PEOPLE))),includeFiltersInResponse:false))&&queryId=voyagerSearchDashClusters.a789a8e572711844816fa31872de1e2f',
             headers = {
                 'accept': 'application/vnd.linkedin.normalized+json+2.1',
                 'accept-encoding': 'gzip, deflate, br',
@@ -152,7 +153,7 @@ class ProfileUrlSpider(scrapy.Spider):
         if self.count >= 1000: return
         self.count += 10  
         yield scrapy.Request(
-            url = f'https://www.linkedin.com/voyager/api/graphql?variables=(start:{self.count},origin:FACETED_SEARCH,query:(keywords:a,flagshipSearchIntent:SEARCH_SRP,queryParameters:List((key:currentCompany,value:List(1035,1441,11864448,1337,5597)),(key:geoUrn,value:List(103644278)),(key:resultType,value:List(PEOPLE))),includeFiltersInResponse:false))&&queryId=voyagerSearchDashClusters.a789a8e572711844816fa31872de1e2f',
+            url = f'https://www.linkedin.com/voyager/api/graphql?variables=(start:{self.count},origin:FACETED_SEARCH,query:(keywords:{self.keyword},flagshipSearchIntent:SEARCH_SRP,queryParameters:List((key:currentCompany,value:List(1035,1441,11864448,1337,5597)),(key:geoUrn,value:List(103644278)),(key:resultType,value:List(PEOPLE))),includeFiltersInResponse:false))&&queryId=voyagerSearchDashClusters.a789a8e572711844816fa31872de1e2f',
             headers = {
                 'accept': 'application/vnd.linkedin.normalized+json+2.1',
                 'accept-encoding': 'gzip, deflate, br',

@@ -12,7 +12,7 @@ from selenium.common.exceptions import NoSuchElementException
 class LinkedlnCompanySpider(scrapy.Spider):
 
 
-    name = "company_url"
+    name = "company"
     count = 0
 
     def get_industry(self, industries, company_industry):
