@@ -127,7 +127,6 @@ class MongoDBPipeline():
         self.client.close()
 
     def process_item(self, item, spider):
-        if spider.name == 'people_url':
-            self.db[spider.settings.get('COLLECTION_NAME')].insert_one(item) # Unrem for production
-            del item['_id'] 
+        self.db[spider.settings.get('COLLECTION_NAME')].insert_one(item) # Unrem for production
+        del item['_id'] 
         return item

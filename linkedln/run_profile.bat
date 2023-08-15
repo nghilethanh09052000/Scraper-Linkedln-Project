@@ -9,7 +9,7 @@ for /L %%i in (0, 1, 25) do (
 
     set "keyword=!letters:~%%i,1!"
     if not "!keyword!" == "" (
-        echo scrapy crawl people_url -a keyword=!keyword! -o people_url_!keyword!.json
+        echo scrapy crawl profile -a keyword=!keyword! -o profile_!keyword!.json
     )
 
 )

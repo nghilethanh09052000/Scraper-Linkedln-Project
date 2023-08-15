@@ -11,8 +11,19 @@ import re
 
 class ProfileUrlSpider(scrapy.Spider):
 
-    name = "people"
+    name = "profile"
     count = 0
+
+    categories = [
+            'EXPERIENCE', 
+            'EDUCATION', 
+            'VOLUNTEERING', 
+            'LANGUAGES',
+            'SKILLS', 
+            'ORGANIZATIONS', 
+            'HONORS',
+            'CERTIFICATIONS'
+        ]
 
     def handle_error(self, failure):
 
@@ -24,18 +35,9 @@ class ProfileUrlSpider(scrapy.Spider):
             log_file.write(log_entry)
 
     def format_people_categories(self, type, includes):
-        categories = [
-            'EXPERIENCE', 
-            'EDUCATION', 
-            'VOLUNTEERING', 
-            'LANGUAGES',
-            'SKILLS', 
-            'ORGANIZATIONS', 
-            'HONORS',
-            'CERTIFICATIONS'
-        ]
+        
         data = []
-        if  type in categories: 
+        if type in self.categories: 
             for include in includes:
                 elements = include['components']['elements']
                 for element in elements:
@@ -196,7 +198,7 @@ class ProfileUrlSpider(scrapy.Spider):
         
         item = { 
             **item,
-            'linkdin_url': linkedin_url,
+            'linkedin_url': linkedin_url,
             'first_name' : first_name,
             'last_name'  : last_name,
             'headline'   : headline,
@@ -375,23 +377,54 @@ class ProfileUrlSpider(scrapy.Spider):
         item             = response.meta['item']
         data = response.json() 
         
-        includes =  [ i for i in data['included'] if 'components' in i ]
+        first_included =  [ i for i in data['included'] if 'components' in i and i['decorationType'] == 'LINE_SEPARATED' ]
+        second_included =  [ i for i in data['included'] if 'components' in i and i['decorationType'] == 'NONE' ]
 
-        experiences = self.format_people_categories('EXPERIENCE', includes)
-    
-        if experiences:
-            experiences = [ 
-                {
-                    'postion': experience['second_key'],
-                    'company': experience['first_key'],
-                    'company_url': experience['third_key'],
-                    'time': experience['fourth_key']
-                } for experience in experiences
-             ]
-            experiences = [ 
-                experience for experience in experiences 
-                if( experience['company'] and not any(char.isdigit() for char in experience['company']) )  
-            ]
+        experiences = []
+        sub_pages = []
+
+        for include in first_included:
+            elements = include['components']['elements'] 
+            for element in elements:
+                if element['components']['entityComponent']:
+                    entity   = element['components']['entityComponent']
+                    if entity['subComponents'] and '*pagedListComponent' in entity['subComponents']['components'][0]['components']:
+                        pages_list = entity['subComponents']['components'][0]['components']['*pagedListComponent']
+                        sub_pages.append({
+                            'company': entity['titleV2']['text']['text'],
+                            'pages_list': pages_list
+                        })
+                        
+                    else:
+                        position = entity['titleV2']['text']['text']
+                        company  =  entity['subtitle']['text'] if entity['subtitle'] else None
+                        company_url = entity['image']['actionTarget'] if entity['image'] else entity['textActionTarget']
+                        time = entity['caption']['text'] if entity['caption'] else None
+                        experiences.append({
+                                'position'  : position,
+                                'company'   : company,
+                                'company_url'  : company_url,
+                                'time' : time,
+                            })
+
+        for include in second_included:
+            for sub_page in sub_pages:
+                if sub_page['pages_list'] == include['entityUrn']:
+                    elements = include['components']['elements'] 
+                    for element in elements:
+                        if element['components']['entityComponent']:
+                            entity   = element['components']['entityComponent']
+                            position = entity['titleV2']['text']['text']
+                            company_url = entity['image']['actionTarget'] if entity['image'] else entity['textActionTarget']
+                            time = entity['caption']['text'] if entity['caption'] else None
+                            experiences.append({
+                                    'position'  : position,
+                                    'company'   : sub_page.get('company'),
+                                    'company_url'  : company_url,
+                                    'time' : time,
+                                })
+                    continue
+
 
         item = {
             **item,
@@ -440,7 +473,7 @@ class ProfileUrlSpider(scrapy.Spider):
                     'time': e['fourth_key']
                 } for e in education
             ]
-
+        
         item = {
             **item,
             'education': education
